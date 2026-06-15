@@ -1,7 +1,5 @@
-import { Download, Mail, BadgeCheck, Building2, Briefcase } from "lucide-react";
+import { Download, Mail, BadgeCheck, Building2, Briefcase, HardHat, Ruler, Compass, Hammer } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import sumanHero from "@/assets/suman-hero.jpg";
-import heroBg from "@/assets/hero-bg.jpg";
 
 function Counter({ end, label, suffix = "+" }: { end: number; label: string; suffix?: string }) {
   return (
@@ -20,12 +18,6 @@ export function Hero() {
     <section id="home" className="relative isolate overflow-hidden pt-28 pb-20 lg:pt-36 lg:pb-28">
       {/* background */}
       <div className="absolute inset-0 -z-10">
-        <img
-          src={heroBg}
-          alt=""
-          aria-hidden
-          className="h-full w-full object-cover opacity-[0.12] dark:opacity-[0.22]"
-        />
         <div className="absolute inset-0 bg-gradient-subtle" />
         <div className="absolute inset-0 grid-pattern opacity-40" />
         <div className="absolute -top-32 -right-32 h-96 w-96 rounded-full bg-primary/30 blur-3xl" />
@@ -76,17 +68,42 @@ export function Hero() {
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="absolute -inset-6 bg-gradient-primary opacity-20 blur-3xl rounded-full" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-border shadow-elegant">
-            <img
-              src={sumanHero}
-              alt="Er. Suman Khadka, Civil Engineer"
-              width={896}
-              height={1152}
-              className="aspect-[4/5] w-full object-cover"
-            />
-            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/30 to-transparent p-5">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-border bg-gradient-primary p-8 shadow-elegant">
+            {/* Monogram card */}
+            <div className="flex h-full w-full flex-col justify-between rounded-[1.5rem] border border-primary-foreground/20 bg-background/10 p-6 text-primary-foreground backdrop-blur-sm">
+              <div className="flex items-center justify-between">
+                <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
+                  <BadgeCheck className="h-3 w-3" /> NEC
+                </div>
+                <HardHat className="h-6 w-6 opacity-80" />
+              </div>
+
+              <div className="text-center">
+                <div className="mx-auto grid h-32 w-32 place-items-center rounded-full border-4 border-primary-foreground/40 bg-primary-foreground/10 text-5xl font-black tracking-tight">
+                  SK
+                </div>
+                <div className="mt-5 text-xl font-extrabold">Er. Suman Khadka</div>
+                <div className="mt-1 text-xs font-medium uppercase tracking-[0.2em] opacity-80">
+                  Civil Engineer
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-2 text-center text-[10px] font-semibold uppercase tracking-wider">
+                <div className="flex flex-col items-center gap-1 rounded-lg bg-primary-foreground/10 p-2">
+                  <Ruler className="h-4 w-4" /> Design
+                </div>
+                <div className="flex flex-col items-center gap-1 rounded-lg bg-primary-foreground/10 p-2">
+                  <Compass className="h-4 w-4" /> Survey
+                </div>
+                <div className="flex flex-col items-center gap-1 rounded-lg bg-primary-foreground/10 p-2">
+                  <Hammer className="h-4 w-4" /> Build
+                </div>
+              </div>
+            </div>
+
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent p-5">
               <div className="flex items-center gap-3">
-                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-gradient-primary text-primary-foreground">
+                <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-background text-primary">
                   <Building2 className="h-5 w-5" />
                 </div>
                 <div className="min-w-0">
