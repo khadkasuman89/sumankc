@@ -99,6 +99,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Er. Suman Khadka" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Er. Suman Khadka | Civil Engineer Nepal" },
+      { name: "description", content: "A professional portfolio website for Civil Engineer Er. Suman Khadka, showcasing expertise and consulting opportunities." },
+      { property: "og:description", content: "A professional portfolio website for Civil Engineer Er. Suman Khadka, showcasing expertise and consulting opportunities." },
+      { name: "twitter:description", content: "A professional portfolio website for Civil Engineer Er. Suman Khadka, showcasing expertise and consulting opportunities." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0MevktSklChzZKzwjYoAVeEmknh2/social-images/social-1781518117759-pp_suman_new___surkhet.webp" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0MevktSklChzZKzwjYoAVeEmknh2/social-images/social-1781518117759-pp_suman_new___surkhet.webp" },
     ],
     links: [
       {
