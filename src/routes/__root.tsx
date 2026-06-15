@@ -77,14 +77,28 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Er. Suman Khadka | Civil Engineer Nepal" },
+      {
+        name: "description",
+        content:
+          "Professional Civil Engineer specializing in structural design, transportation engineering, project estimation, construction management, and engineering consultancy services in Nepal.",
+      },
+      {
+        name: "keywords",
+        content:
+          "Civil Engineer Nepal, Structural Engineer Nepal, Transportation Engineer, Estimation Engineer, Construction Consultant, Suman Khadka",
+      },
+      { name: "author", content: "Er. Suman Khadka" },
+      { property: "og:title", content: "Er. Suman Khadka | Civil Engineer Nepal" },
+      {
+        property: "og:description",
+        content:
+          "Civil Engineer from Pulchowk Campus (IOE) — structural design, transportation engineering, project estimation, and construction management.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { property: "og:site_name", content: "Er. Suman Khadka" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Er. Suman Khadka | Civil Engineer Nepal" },
     ],
     links: [
       {
