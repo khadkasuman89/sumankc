@@ -65,6 +65,12 @@
     "vite-tsconfig-paths": "^6.0.2",
     "zod": "^3.24.2"
   },
+  "overrides": {
+    "h3-v2": "npm:h3@2.0.1-rc.22"
+  },
+  "resolutions": {
+    "h3-v2": "npm:h3@2.0.1-rc.22"
+  },
   "devDependencies": {
     "@eslint/js": "^9.32.0",
     "@lovable.dev/vite-tanstack-config": "2.4.0",
