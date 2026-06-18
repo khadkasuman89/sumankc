@@ -45,6 +45,18 @@ export function Research() {
             <Button variant="outline">View Citation</Button>
           </div>
         </article>
+
+        <div className="mt-8 rounded-3xl border border-dashed border-border bg-card/60 p-8 text-center shadow-card">
+          <div className="mx-auto grid h-12 w-12 place-items-center rounded-2xl bg-gradient-primary text-primary-foreground">
+            <FileText className="h-6 w-6" />
+          </div>
+          <h4 className="mt-4 text-lg font-bold">More publications coming soon</h4>
+          <p className="mt-2 text-sm text-muted-foreground">
+            Additional articles and journals will be uploaded here. Check back soon for the full
+            list of peer-reviewed contributions in construction management, water supply, and
+            transportation engineering.
+          </p>
+        </div>
       </div>
     </section>
   );

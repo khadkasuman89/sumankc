@@ -9,6 +9,7 @@ import { Research } from "@/components/portfolio/research";
 import { Skills } from "@/components/portfolio/skills";
 import { Achievements } from "@/components/portfolio/achievements";
 import { Education } from "@/components/portfolio/education";
+import { Gallery } from "@/components/portfolio/gallery";
 import { Contact } from "@/components/portfolio/contact";
 import { Footer } from "@/components/portfolio/footer";
 import { FloatingActions } from "@/components/portfolio/floating-actions";
@@ -44,10 +45,18 @@ export const Route = createFileRoute("/")({
           url: "https://suman-khadka.com.np",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Myanglung, Terhathum",
+            addressLocality: "Itahari, Sunsari",
             addressCountry: "Nepal",
           },
-          alumniOf: "Pulchowk Engineering Campus, IOE, Tribhuvan University",
+          worksFor: {
+            "@type": "GovernmentOrganization",
+            name: "Department of Water Supply and Sewerage Management, Government of Nepal",
+          },
+          spouse: "Mrs. Baneeka Thapa Khadka",
+          alumniOf: [
+            "Pulchowk Engineering Campus, IOE, Tribhuvan University",
+            "Mid-West University, Surkhet",
+          ],
         }),
       },
     ],
@@ -68,6 +77,7 @@ function Index() {
         <Skills />
         <Achievements />
         <Education />
+        <Gallery />
         <Contact />
       </main>
       <Footer />

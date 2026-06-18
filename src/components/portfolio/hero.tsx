@@ -1,5 +1,7 @@
-import { Download, Mail, BadgeCheck, Building2, Briefcase, HardHat, Ruler, Compass, Hammer } from "lucide-react";
+import { Download, Mail, BadgeCheck, Building2, Briefcase } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import portrait from "@/assets/suman-portrait.jpg.asset.json";
+import cv from "@/assets/suman-cv.pdf.asset.json";
 
 function Counter({ end, label, suffix = "+" }: { end: number; label: string; suffix?: string }) {
   return (
@@ -40,15 +42,16 @@ export function Hero() {
           </p>
 
           <p className="mt-6 max-w-xl text-base leading-relaxed text-muted-foreground">
-            Passionate Civil Engineer with experience in structural design, project estimation,
-            transportation engineering, construction management, and research. Graduate of
-            Pulchowk Engineering Campus (IOE) with a proven record in engineering consultancy
-            and project delivery.
+            Government Engineer at the Department of Water Supply and Sewerage
+            Management, currently serving with the Integrated Water Supply and
+            Sewerage Management Project, Itahari. Working in Nepal&rsquo;s
+            infrastructure sector since 2019, with a focus on water supply,
+            sewerage, and construction management.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button asChild size="lg" className="bg-gradient-primary shadow-elegant hover:opacity-90">
-              <a href="/cv-suman-khadka.pdf" download>
+              <a href={cv.url} download target="_blank" rel="noopener noreferrer">
                 <Download className="h-4 w-4" /> Download CV
               </a>
             </Button>
@@ -60,57 +63,33 @@ export function Hero() {
           </div>
 
           <div className="mt-10 grid grid-cols-3 gap-3 max-w-md">
-            <Counter end={5} label="Years" />
+            <Counter end={7} label="Years Gov." />
             <Counter end={20} label="Projects" />
-            <Counter end={3} label="Research" />
+            <Counter end={2} label="Degrees" />
           </div>
         </div>
 
         <div className="relative mx-auto w-full max-w-md lg:max-w-none">
           <div className="absolute -inset-6 bg-gradient-primary opacity-20 blur-3xl rounded-full" />
-          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-border bg-gradient-primary p-8 shadow-elegant">
-            {/* Monogram card */}
-            <div className="flex h-full w-full flex-col justify-between rounded-[1.5rem] border border-primary-foreground/20 bg-background/10 p-6 text-primary-foreground backdrop-blur-sm">
-              <div className="flex items-center justify-between">
-                <div className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-3 py-1 text-[10px] font-bold uppercase tracking-widest">
-                  <BadgeCheck className="h-3 w-3" /> NEC
-                </div>
-                <HardHat className="h-6 w-6 opacity-80" />
-              </div>
-
-              <div className="text-center">
-                <div className="mx-auto grid h-32 w-32 place-items-center rounded-full border-4 border-primary-foreground/40 bg-primary-foreground/10 text-5xl font-black tracking-tight">
-                  SK
-                </div>
-                <div className="mt-5 text-xl font-extrabold">Er. Suman Khadka</div>
-                <div className="mt-1 text-xs font-medium uppercase tracking-[0.2em] opacity-80">
-                  Civil Engineer
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-2 text-center text-[10px] font-semibold uppercase tracking-wider">
-                <div className="flex flex-col items-center gap-1 rounded-lg bg-primary-foreground/10 p-2">
-                  <Ruler className="h-4 w-4" /> Design
-                </div>
-                <div className="flex flex-col items-center gap-1 rounded-lg bg-primary-foreground/10 p-2">
-                  <Compass className="h-4 w-4" /> Survey
-                </div>
-                <div className="flex flex-col items-center gap-1 rounded-lg bg-primary-foreground/10 p-2">
-                  <Hammer className="h-4 w-4" /> Build
-                </div>
-              </div>
-            </div>
-
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/80 via-background/20 to-transparent p-5">
+          <div className="relative aspect-[4/5] w-full overflow-hidden rounded-[2rem] border border-border shadow-elegant">
+            <img
+              src={portrait.url}
+              alt="Er. Suman Khadka — Civil Engineer, Government of Nepal"
+              className="h-full w-full object-cover"
+            />
+            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent p-5">
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-background text-primary">
                   <Building2 className="h-5 w-5" />
                 </div>
                 <div className="min-w-0">
-                  <div className="text-sm font-semibold">Pulchowk Campus, IOE</div>
-                  <div className="text-xs text-muted-foreground">B.E. Civil · 79.65%</div>
+                  <div className="text-sm font-semibold">Government of Nepal</div>
+                  <div className="text-xs text-muted-foreground">DWSSM · Itahari</div>
                 </div>
               </div>
+            </div>
+            <div className="absolute right-4 top-4 inline-flex items-center gap-2 rounded-full bg-background/80 px-3 py-1 text-[10px] font-bold uppercase tracking-widest backdrop-blur">
+              <BadgeCheck className="h-3 w-3 text-primary" /> NEC
             </div>
           </div>
 

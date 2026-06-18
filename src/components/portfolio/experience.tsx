@@ -3,6 +3,18 @@ import { SectionHeading } from "./section-heading";
 
 const items = [
   {
+    org: "Government of Nepal — DWSSM",
+    role: "Civil Engineer · Integrated Water Supply & Sewerage Management Project, Itahari",
+    period: "2019 – Present",
+    bullets: [
+      "Ministry of Infrastructure Development, Department of Water Supply and Sewerage Management",
+      "Planning, design and supervision of water supply and sewerage infrastructure",
+      "Project management and contract administration for public infrastructure",
+      "Site supervision, quality assurance and progress monitoring",
+      "Coordination with stakeholders, contractors and local authorities",
+    ],
+  },
+  {
     org: "Design Core Pvt. Ltd.",
     role: "Civil Engineer",
     period: "2019",

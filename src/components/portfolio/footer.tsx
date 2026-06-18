@@ -10,7 +10,7 @@ export function Footer() {
           </span>
           <div>
             <div className="text-sm font-bold">Er. Suman Khadka</div>
-            <div className="text-xs text-muted-foreground">Civil Engineer · Nepal</div>
+            <div className="text-xs text-muted-foreground">Civil Engineer · Itahari, Sunsari, Nepal</div>
           </div>
         </div>
         <p className="text-xs text-muted-foreground">

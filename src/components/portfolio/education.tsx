@@ -3,12 +3,16 @@ import { SectionHeading } from "./section-heading";
 
 const items = [
   {
-    school: "Pulchowk Engineering Campus",
+    school: "Mid-West University, Surkhet",
+    program: "Master in Construction Management",
+    score: "2024 – 2026",
+  },
+  {
+    school: "Pulchowk Engineering Campus, IOE",
     program: "Bachelor in Civil Engineering",
     score: "79.65%",
   },
   { school: "Pinnacle Academy", program: "+2 Science", score: "84.10%" },
-  { school: "Singha Bahini School", program: "SLC", score: "—" },
 ];
 
 export function Education() {
