@@ -53,7 +53,7 @@ export function Contact() {
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-4">
             {[
-              { icon: Mail, label: "Email", value: "er.sumankhadka@gmail.com", href: "mailto:er.sumankhadka@gmail.com" },
+              { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com", href: "mailto:khadkasuman89@gmail.com" },
               { icon: Phone, label: "Phone", value: "+977 9818486399", href: "tel:+9779818486399" },
               { icon: MapPin, label: "Location", value: "Nepal", href: "#" },
             ].map(({ icon: Icon, label, value, href }) => (
