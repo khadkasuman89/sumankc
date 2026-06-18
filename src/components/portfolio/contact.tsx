@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Linkedin, Facebook, Github, Globe } from "lucide-react";
+import { Mail, Phone, MapPin, Send, Facebook, Instagram, Music2 } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -16,10 +16,9 @@ const schema = z.object({
 });
 
 const socials = [
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Globe, href: "https://suman-khadka.com.np", label: "Website" },
+  { icon: Facebook, href: "https://www.facebook.com/er.sumankhadka", label: "Facebook" },
+  { icon: Instagram, href: "https://www.instagram.com/Er.sumankhadka", label: "Instagram" },
+  { icon: Music2, href: "https://www.tiktok.com/@er.sumankhadka", label: "TikTok" },
 ];
 
 export function Contact() {
@@ -55,7 +54,7 @@ export function Contact() {
             {[
               { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com", href: "mailto:khadkasuman89@gmail.com" },
               { icon: Phone, label: "Phone", value: "+977 9818486399", href: "tel:+9779818486399" },
-              { icon: MapPin, label: "Location", value: "Nepal", href: "#" },
+              { icon: MapPin, label: "Location", value: "Itahari, Sunsari, Nepal", href: "https://maps.google.com/?q=Itahari+Sunsari+Nepal" },
             ].map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
@@ -77,6 +76,8 @@ export function Contact() {
                 <a
                   key={label}
                   href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label={label}
                   className="grid h-11 w-11 place-items-center rounded-xl border border-border bg-card text-muted-foreground shadow-card transition-all hover:-translate-y-0.5 hover:text-primary hover:shadow-elegant"
                 >

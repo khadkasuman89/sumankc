@@ -1,11 +1,11 @@
-import { MapPin, Mail, Globe, GraduationCap } from "lucide-react";
+import { MapPin, Mail, Heart, Building2 } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 
 const info = [
-  { icon: MapPin, label: "Location", value: "Myanglung, Terhathum, Nepal" },
+  { icon: MapPin, label: "Location", value: "Itahari, Sunsari, Nepal" },
+  { icon: Building2, label: "Employer", value: "Government of Nepal — DWSSM" },
   { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com" },
-  { icon: Globe, label: "Website", value: "suman-khadka.com.np" },
-  { icon: GraduationCap, label: "Profession", value: "Civil Engineer" },
+  { icon: Heart, label: "Spouse", value: "Mrs. Baneeka Thapa Khadka" },
 ];
 
 export function About() {
@@ -21,19 +21,24 @@ export function About() {
           <div className="lg:col-span-3 space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
               <span className="font-semibold text-foreground">Er. Suman Khadka</span> is a Civil
-              Engineer graduated from Pulchowk Engineering Campus, Institute of Engineering (IOE),
-              Tribhuvan University. He specializes in structural engineering, transportation
-              engineering, project estimation, cost analysis, and construction management.
+              Engineer serving the <span className="font-semibold text-foreground">Government of
+              Nepal</span> under the Ministry of Infrastructure Development, Department of Water
+              Supply and Sewerage Management — currently posted at the Integrated Water Supply
+              and Sewerage Management Project, Itahari.
             </p>
             <p>
-              He has worked with engineering consultancy firms across Nepal and contributed to
-              research in transportation systems — including multi-criteria decision making
-              under fuzzy environments for public transit planning in Kathmandu.
+              He has been working in Nepal&rsquo;s public infrastructure sector since
+              <span className="font-semibold text-foreground"> 2019</span>, focusing on water
+              supply, sewerage, and construction management. He holds a Bachelor&rsquo;s in Civil
+              Engineering from Pulchowk Campus (IOE) and recently completed his
+              <span className="font-semibold text-foreground"> Master&rsquo;s in Construction
+              Management</span> from Mid-West University, Surkhet (2024–2026).
             </p>
             <p>
-              His practice blends modern computational tools — ETABS, SAP2000, HEC-RAS, Civil
-              3D — with on-the-ground site supervision, BOQ preparation, and project
-              coordination.
+              His practice blends modern computational tools — ETABS, SAP2000, HEC-RAS, Civil 3D —
+              with on-the-ground site supervision, BOQ preparation, and project coordination.
+              Happily married to <span className="font-semibold text-foreground">Mrs. Baneeka
+              Thapa Khadka</span>.
             </p>
           </div>
 
