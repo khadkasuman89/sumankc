@@ -3,7 +3,7 @@ import { SectionHeading } from "./section-heading";
 
 const info = [
   { icon: MapPin, label: "Location", value: "Myanglung, Terhathum, Nepal" },
-  { icon: Mail, label: "Email", value: "er.sumankhadka@gmail.com" },
+  { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com" },
   { icon: Globe, label: "Website", value: "suman-khadka.com.np" },
   { icon: GraduationCap, label: "Profession", value: "Civil Engineer" },
 ];
