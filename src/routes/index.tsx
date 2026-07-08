@@ -4,11 +4,10 @@ import { Navbar } from "@/components/portfolio/navbar";
 import { Hero } from "@/components/portfolio/hero";
 import { About } from "@/components/portfolio/about";
 import { Experience } from "@/components/portfolio/experience";
-
 import { Research } from "@/components/portfolio/research";
 import { Skills } from "@/components/portfolio/skills";
-
 import { Education } from "@/components/portfolio/education";
+import { CV } from "@/components/portfolio/cv";
 import { Gallery } from "@/components/portfolio/gallery";
 import { Contact } from "@/components/portfolio/contact";
 import { Footer } from "@/components/portfolio/footer";
