@@ -74,6 +74,7 @@ function Index() {
         <Research />
         <Skills />
         <Education />
+        <CV />
         <Gallery />
         <Contact />
       </main>
