@@ -1,11 +1,19 @@
-Remove the Projects and Achievements tabs/sections from the homepage.
+## Plan: Remove the CV Section
 
-Changes:
-1. Update `src/routes/index.tsx`
-   - Remove imports for `Projects` and `Achievements`
-   - Remove `<Projects />` and `<Achievements />` from the page component render order
-2. Update `src/components/portfolio/navbar.tsx`
-   - Remove the `#projects` and `#achievements` entries from the `links` array
-3. Verify no other references to these removed anchors remain; optionally delete the now-unused component files `src/components/portfolio/projects.tsx` and `src/components/portfolio/achievements.tsx` if they are not imported elsewhere.
+### What will change
+1. **`src/routes/index.tsx`**
+   - Remove the `CV` component import.
+   - Remove the `<CV />` render call between `<Education />` and `<Gallery />`.
 
-No other page content or styling will be changed.
+2. **`src/components/portfolio/navbar.tsx`**
+   - Remove the `{ href: "#cv", label: "CV" }` entry from the `links` array.
+
+3. **Cleanup**
+   - Delete the now-unused file `src/components/portfolio/cv.tsx`.
+
+### What will NOT change
+- The CV asset file (`src/assets/suman-cv.pdf.asset.json`) will remain in the project in case it is needed later.
+- No other sections, styling, or functionality will be modified.
+
+### Verification
+- Run `bun run build` to confirm the site still compiles cleanly after the removals.
