@@ -4,10 +4,10 @@ import { Navbar } from "@/components/portfolio/navbar";
 import { Hero } from "@/components/portfolio/hero";
 import { About } from "@/components/portfolio/about";
 import { Experience } from "@/components/portfolio/experience";
-import { Projects } from "@/components/portfolio/projects";
+
 import { Research } from "@/components/portfolio/research";
 import { Skills } from "@/components/portfolio/skills";
-import { Achievements } from "@/components/portfolio/achievements";
+
 import { Education } from "@/components/portfolio/education";
 import { Gallery } from "@/components/portfolio/gallery";
 import { Contact } from "@/components/portfolio/contact";
@@ -72,10 +72,8 @@ function Index() {
         <Hero />
         <About />
         <Experience />
-        <Projects />
         <Research />
         <Skills />
-        <Achievements />
         <Education />
         <Gallery />
         <Contact />
