@@ -52,9 +52,10 @@ const items = [
 
 export function Experience() {
   return (
-    <section id="experience" className="relative py-20 lg:py-28 bg-gradient-subtle">
+    <section id="experience" className="relative py-20 lg:py-28 bg-navy-deep text-paper">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Experience" title="Where I've built things" />
+        <SectionHeading eyebrow="Experience" title="Professional Journey" invert />
+
 
         <div className="relative mx-auto max-w-3xl">
           <div className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-primary via-primary/40 to-transparent md:left-1/2" />
