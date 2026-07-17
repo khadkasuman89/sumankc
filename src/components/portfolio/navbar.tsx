@@ -80,14 +80,14 @@ export function Navbar() {
 
 
       {open && (
-        <div className="lg:hidden glass border-t border-border">
+        <div className="lg:hidden bg-navy-deep border-t border-steel/20">
           <ul className="mx-auto flex max-w-7xl flex-col px-4 py-3">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-3 text-sm font-medium text-foreground hover:bg-accent"
+                  className="block rounded-md px-3 py-3 text-sm font-medium text-paper hover:bg-navy"
                 >
                   {l.label}
                 </a>
@@ -95,6 +95,7 @@ export function Navbar() {
             ))}
           </ul>
         </div>
+
       )}
     </header>
   );
