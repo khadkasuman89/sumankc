@@ -73,23 +73,24 @@ export function Experience() {
                 </div>
 
                 <div className="pl-14 md:pl-0 md:pr-10 md:text-right md:[&.left]:pl-10 md:[&.left]:pr-0 md:[&.left]:text-left">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-primary">
+                  <div className="text-xs font-bold uppercase tracking-[0.2em] text-steel">
                     {it.period}
                   </div>
-                  <h3 className="mt-1 text-xl font-bold">{it.org}</h3>
-                  <p className="text-sm text-muted-foreground">{it.role}</p>
+                  <h3 className="mt-2 font-display text-xl font-bold text-paper">{it.org}</h3>
+                  <p className="text-sm text-paper/60">{it.role}</p>
                 </div>
 
                 <div className="mt-3 pl-14 md:mt-0 md:pl-10">
-                  <ul className="space-y-2 rounded-2xl border border-border bg-card p-5 shadow-card">
+                  <ul className="space-y-2 rounded-2xl border border-paper/10 bg-navy/40 p-5 backdrop-blur">
                     {it.bullets.map((b) => (
-                      <li key={b} className="flex gap-2 text-sm text-muted-foreground">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <li key={b} className="flex gap-2 text-sm text-paper/75">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-steel" />
                         <span>{b}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
+
               </div>
             ))}
           </div>
