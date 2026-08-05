@@ -1,6 +1,8 @@
 import { Download, Mail, BadgeCheck, Building2 } from "lucide-react";
 import portrait from "@/assets/suman-portrait.jpg.asset.json";
 import cv from "@/assets/suman-cv.pdf.asset.json";
+import { NepaliClock } from "@/components/portfolio/nepali-clock";
+
 
 export function Hero() {
   return (
@@ -45,7 +47,12 @@ export function Hero() {
               <Download className="h-4 w-4" /> Download CV
             </a>
           </div>
+
+          <div className="mt-8">
+            <NepaliClock />
+          </div>
         </div>
+
       </div>
 
       {/* Right — navy portrait panel */}
