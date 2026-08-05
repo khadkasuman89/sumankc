@@ -26,8 +26,8 @@ const BS_MONTH_DAYS: Record<number, number[]> = {
 };
 
 const BASE_BS_YEAR = 2070;
-/** April 14, 2013 UTC (midnight) */
-const BASE_AD_UTC = Date.UTC(2013, 3, 14);
+/** Baisakh 1, 2070 BS anchor */
+const BASE_AD_UTC = Date.UTC(2013, 3, 15);
 const MS_PER_DAY = 86_400_000;
 
 export const NEPALI_MONTHS = [
