@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden bg-background px-5 pb-16 pt-28 sm:px-8 lg:min-h-[92vh] lg:px-16 lg:pb-20 lg:pt-32"
+      className="relative isolate overflow-hidden bg-background px-5 pb-16 pt-28 sm:px-8 lg:min-h-[760px] lg:px-16 lg:pb-20 lg:pt-32"
     >
       <div aria-hidden className="editorial-grid absolute inset-0" />
       <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-12 lg:gap-16">
@@ -51,7 +51,7 @@ export function Hero() {
           </div>
           <dl className="mt-9 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-5 border-t border-border pt-7 sm:grid-cols-3">
             <div><dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Experience</dt><dd className="mt-1 font-display text-2xl italic">7+ years</dd></div>
-            <div><dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">NEC</dt><dd className="mt-1 font-display text-2xl italic">20971 Civil ‘A’</dd></div>
+            <div><dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">NEC</dt><dd className="mt-1 font-display text-2xl italic">20971 Civil A</dd></div>
             <div><dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">M.Sc.</dt><dd className="mt-1 font-display text-2xl italic">CGPA 3.77</dd></div>
           </dl>
         </div>
