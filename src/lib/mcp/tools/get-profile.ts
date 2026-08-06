@@ -9,10 +9,10 @@ export default defineTool({
   handler: () => {
     const profile = {
       name: "Er. Suman Khadka",
-      title: "Civil Engineer",
+      title: "Gazetted (Class III), Engineer (Civil)",
       employer: "Government of Nepal — Department of Water Supply and Sewerage Management (DWSSM)",
-      currentPosting: "Integrated Water Supply and Sewerage Management Project, Itahari",
-      location: "Itahari, Sunsari, Nepal",
+      currentPosting: "Government of Nepal",
+      location: "Myanglung, Terhathum, Koshi Province, Nepal",
       spouse: "Mrs. Baneeka Thapa Khadka",
       email: "khadkasuman89@gmail.com",
       phone: "+977 9818486399",
@@ -23,7 +23,7 @@ export default defineTool({
         tiktok: "https://www.tiktok.com/@er.sumankhadka",
       },
       summary:
-        "Civil Engineer serving the Government of Nepal since 2019, focused on water supply, sewerage, and construction management. Bachelor's from Pulchowk Campus (IOE); Master's in Construction Management from Mid-West University, Surkhet (2024–2026).",
+        "Gazetted Civil Engineer with more than seven years of experience in public infrastructure, contract administration, procurement, and construction supervision. M.Sc. in Construction Management with distinction (CGPA 3.77).",
     };
     return {
       content: [{ type: "text", text: JSON.stringify(profile, null, 2) }],

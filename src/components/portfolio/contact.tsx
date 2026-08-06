@@ -54,12 +54,12 @@ export function Contact() {
             {[
               { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com", href: "mailto:khadkasuman89@gmail.com" },
               { icon: Phone, label: "Phone", value: "+977 9818486399", href: "tel:+9779818486399" },
-              { icon: MapPin, label: "Location", value: "Itahari, Sunsari, Nepal", href: "https://maps.google.com/?q=Itahari+Sunsari+Nepal" },
+              { icon: MapPin, label: "Location", value: "Myanglung, Terhathum, Nepal", href: "https://maps.google.com/?q=Myanglung+Terhathum+Nepal" },
             ].map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
                 href={href}
-                className="flex items-start gap-4 rounded-2xl border border-border bg-card p-5 shadow-card transition-all hover:-translate-y-0.5 hover:shadow-elegant"
+                className="flex items-start gap-4 border-t border-border bg-card p-5 transition-all hover:-translate-y-0.5"
               >
                 <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">
                   <Icon className="h-5 w-5" />
@@ -89,7 +89,7 @@ export function Contact() {
 
           <form
             onSubmit={onSubmit}
-            className="lg:col-span-3 rounded-3xl border border-border bg-card p-6 shadow-card md:p-8"
+            className="border border-border bg-card p-6 shadow-card md:p-8 lg:col-span-3"
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
