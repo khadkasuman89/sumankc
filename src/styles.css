@@ -13,8 +13,8 @@
   --radius-3xl: calc(var(--radius) + 12px);
   --radius-4xl: calc(var(--radius) + 16px);
 
-  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Work Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Instrument Serif", ui-serif, Georgia, serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -59,26 +59,26 @@
 }
 
 :root {
-  --radius: 0.75rem;
+  --radius: 0.25rem;
 
-  --background: oklch(0.99 0.003 250);
-  --foreground: oklch(0.22 0.07 265);
+  --background: oklch(0.98 0.006 235);
+  --foreground: oklch(0.24 0.06 250);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.22 0.07 265);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.22 0.07 265);
-  --primary: oklch(0.55 0.11 250);
+  --primary: oklch(0.43 0.09 235);
   --primary-foreground: oklch(0.98 0.005 250);
   --primary-glow: oklch(0.68 0.10 245);
-  --secondary: oklch(0.95 0.012 250);
+  --secondary: oklch(0.93 0.018 235);
   --secondary-foreground: oklch(0.22 0.07 265);
-  --muted: oklch(0.95 0.012 250);
+  --muted: oklch(0.93 0.018 235);
   --muted-foreground: oklch(0.45 0.04 260);
-  --accent: oklch(0.90 0.03 250);
+  --accent: oklch(0.90 0.025 235);
   --accent-foreground: oklch(0.22 0.07 265);
   --destructive: oklch(0.60 0.22 27);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.88 0.02 250);
+  --border: oklch(0.86 0.02 235);
   --input: oklch(0.92 0.015 250);
   --ring: oklch(0.55 0.11 250);
   --chart-1: oklch(0.22 0.07 265);
@@ -157,15 +157,21 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, h3, h4, h5, h6, .font-display {
+  h1, h2, .font-display {
     font-family: var(--font-display);
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
   }
 
   ::selection {
     background: color-mix(in oklab, var(--color-primary) 30%, transparent);
     color: var(--color-primary-foreground);
   }
+}
+
+@utility editorial-grid {
+  opacity: 0.35;
+  background-image: radial-gradient(color-mix(in oklab, var(--color-primary) 18%, transparent) 0.7px, transparent 0.7px);
+  background-size: 24px 24px;
 }
 
 @utility bg-gradient-primary {
