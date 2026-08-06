@@ -10,8 +10,6 @@ const groups = [
       ["AutoCAD", 95],
       ["Civil 3D", 88],
       ["ETABS", 90],
-      ["SAP2000", 85],
-      ["HEC-RAS", 80],
       ["SketchUp", 78],
       ["Smart Road", 82],
     ],
@@ -20,13 +18,12 @@ const groups = [
     icon: Wrench,
     title: "Technical Skills",
     items: [
-      ["Structural Analysis", 92],
-      ["Quantity Surveying", 90],
-      ["Cost Estimation", 88],
-      ["Transportation Engg.", 87],
-      ["Construction Mgmt.", 85],
-      ["Hydrology", 78],
-      ["Surveying", 90],
+      ["Contract Administration", 95],
+      ["Procurement & Bid Evaluation", 92],
+      ["Construction Supervision", 94],
+      ["Quality Assurance", 90],
+      ["Project Management", 92],
+      ["Civil Engineering Design", 88],
     ],
   },
   {
@@ -35,7 +32,7 @@ const groups = [
     items: [
       ["Website Design", 80],
       ["Web Hosting", 75],
-      ["HTML / CSS", 78],
+      ["Practical AI Tools", 78],
       ["MS Office", 95],
     ],
   },
@@ -87,7 +84,7 @@ export function Skills() {
           {groups.map((g) => (
             <div
               key={g.title}
-              className="rounded-3xl border border-border bg-card p-6 shadow-card"
+              className="border-t-2 border-primary bg-card p-6 shadow-card"
             >
               <div className="flex items-center gap-3">
                 <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-primary text-primary-foreground">

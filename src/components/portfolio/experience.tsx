@@ -3,49 +3,40 @@ import { SectionHeading } from "./section-heading";
 
 const items = [
   {
-    org: "Government of Nepal — DWSSM",
-    role: "Civil Engineer · Integrated Water Supply & Sewerage Management Project, Itahari",
-    period: "2019 – Present",
+    org: "Government of Nepal",
+    role: "Gazetted (Class III), Engineer (Civil)",
+    period: "2079 BS – Present",
     bullets: [
-      "Ministry of Infrastructure Development, Department of Water Supply and Sewerage Management",
-      "Planning, design and supervision of water supply and sewerage infrastructure",
-      "Project management and contract administration for public infrastructure",
-      "Site supervision, quality assurance and progress monitoring",
-      "Coordination with stakeholders, contractors and local authorities",
+      "Contract administration and construction supervision for water supply and sewerage infrastructure",
+      "Procurement documents, IPC payments and completion certification under World Bank/ADB Small Works standards",
+      "Quality assurance including concrete cube testing and NDT protocols",
     ],
   },
   {
-    org: "Design Core Pvt. Ltd.",
+    org: "Myanglung Municipality",
     role: "Civil Engineer",
-    period: "2019",
+    period: "2076 – 2079 BS",
     bullets: [
-      "Structural design and analysis of residential buildings",
-      "Quantity surveying and estimation",
-      "Road project valuation",
-      "Hydraulic component design",
-      "Building and road drafting",
+      "Led the municipality’s technical department in Terhathum",
+      "Planning, design, municipal drawing approval, cost estimation and valuation of civil works",
+    ],
+  },
+  {
+    org: "Design Core Systems Pvt. Ltd.",
+    role: "Civil Engineer",
+    period: "2075 – 2076 BS",
+    bullets: [
+      "Drainage design and analysis for land development projects across cities in the United States",
+      "Estimation and quantity surveying for traffic, storm sewer, roads, hydraulic and sanitary sewer projects",
     ],
   },
   {
     org: "Himalayan Prefab Pvt. Ltd.",
     role: "Civil Engineer",
-    period: "2018 – 2019",
+    period: "2075 Bhadra – Falgun",
     bullets: [
-      "Steel and prefab structure design",
-      "Cost estimation and valuation",
-      "Site supervision",
-      "BOQ preparation",
-      "Project coordination",
-    ],
-  },
-  {
-    org: "IOE Pulchowk Campus",
-    role: "Research Fellow",
-    period: "2018",
-    bullets: [
-      "Transportation engineering research",
-      "Research publication",
-      "Data analysis and reporting",
+      "Design and analysis of steel and prefab structures",
+      "Site supervision, coordination, cost estimates and BOQ preparation",
     ],
   },
 ];

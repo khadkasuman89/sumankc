@@ -20,13 +20,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Civil Engineer from Pulchowk Campus (IOE) specializing in structural design, transportation engineering, project estimation, and construction management in Nepal.",
+          "Gazetted Civil Engineer and M.Sc. in Construction Management with 7+ years in public infrastructure, procurement, contract administration, and construction supervision.",
       },
       { property: "og:title", content: "Er. Suman Khadka | Civil Engineer Nepal" },
       {
         property: "og:description",
         content:
-          "Structural design, transportation engineering, and engineering consultancy services in Nepal.",
+          "Public infrastructure delivery, procurement, contract administration, and construction supervision in Nepal.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -38,13 +38,13 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Er. Suman Khadka",
-          jobTitle: "Civil Engineer",
+          jobTitle: "Gazetted (Class III) Engineer (Civil)",
           email: "mailto:khadkasuman89@gmail.com",
           telephone: "+977-9818486399",
           url: "https://suman-khadka.com.np",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Itahari, Sunsari",
+            addressLocality: "Myanglung, Terhathum",
             addressCountry: "Nepal",
           },
           worksFor: {

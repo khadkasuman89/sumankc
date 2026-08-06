@@ -17,11 +17,11 @@ export function Gallery() {
           description="A glimpse into life beyond engineering."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-6 sm:grid-cols-2">
           {photos.map((p) => (
             <figure
               key={p.src}
-              className="group relative overflow-hidden rounded-3xl border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
+              className="group relative overflow-hidden border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
             >
               <div className="aspect-[3/4] overflow-hidden">
                 <img

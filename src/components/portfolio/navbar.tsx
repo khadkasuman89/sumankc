@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Menu, X, HardHat } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -30,18 +30,13 @@ export function Navbar() {
     <header
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-navy-deep/95 backdrop-blur border-b border-steel/20"
-          : "bg-navy-deep/70 backdrop-blur-sm"
+          ? "border-b border-border bg-background/95 backdrop-blur"
+          : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
-        <a href="#home" className="flex items-center gap-2 font-display font-bold tracking-tight text-paper">
-          <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-steel text-paper">
-            <HardHat className="h-5 w-5" />
-          </span>
-          <span className="hidden sm:inline text-base">
-            S.<span className="text-steel">KHADKA</span>
-          </span>
+        <a href="#home" className="font-display text-2xl text-foreground">
+          Suman <span className="italic text-primary">Khadka</span>
         </a>
 
         <ul className="hidden lg:flex items-center gap-1">
@@ -49,7 +44,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-md px-3 py-2 text-sm font-medium text-paper/80 transition-colors hover:text-steel"
+                className="px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
               >
                 {l.label}
               </a>
@@ -62,14 +57,14 @@ export function Navbar() {
           <Button
             asChild
             size="sm"
-            className="hidden sm:inline-flex rounded-full bg-steel text-paper hover:bg-navy"
+            className="hidden bg-primary text-primary-foreground hover:bg-foreground sm:inline-flex"
           >
             <a href="#contact">Hire Me</a>
           </Button>
           <Button
             variant="ghost"
             size="icon"
-            className="lg:hidden text-paper hover:bg-navy"
+            className="text-foreground hover:bg-muted lg:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -80,14 +75,14 @@ export function Navbar() {
 
 
       {open && (
-        <div className="lg:hidden bg-navy-deep border-t border-steel/20">
+        <div className="border-t border-border bg-background lg:hidden">
           <ul className="mx-auto flex max-w-7xl flex-col px-4 py-3">
             {links.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-md px-3 py-3 text-sm font-medium text-paper hover:bg-navy"
+                  className="block px-3 py-3 text-sm font-medium text-foreground hover:bg-muted"
                 >
                   {l.label}
                 </a>
