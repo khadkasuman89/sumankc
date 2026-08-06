@@ -12,23 +12,23 @@ export function SectionHeading({
   invert?: boolean;
 }) {
   return (
-    <div className={`mb-14 max-w-2xl ${align === "center" ? "mx-auto text-center" : ""}`}>
+    <div className={`mb-14 max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       <div
-        className={`text-xs font-bold uppercase tracking-[0.3em] ${
+        className={`text-xs font-semibold uppercase tracking-[0.22em] ${
           invert ? "text-steel" : "text-steel"
         }`}
       >
         {eyebrow}
       </div>
       <h2
-        className={`mt-4 font-display text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl ${
+         className={`mt-4 font-display text-4xl leading-none sm:text-5xl lg:text-6xl ${
           invert ? "text-paper" : "text-navy-deep"
         }`}
       >
         {title}
       </h2>
       <div
-        className={`mx-auto mt-5 h-1 w-16 ${
+        className={`mx-auto mt-5 h-px w-20 ${
           align === "center" ? "" : "mx-0"
         } bg-steel`}
       />

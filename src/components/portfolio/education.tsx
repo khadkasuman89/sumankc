@@ -4,15 +4,16 @@ import { SectionHeading } from "./section-heading";
 const items = [
   {
     school: "Mid-West University, Surkhet",
-    program: "Master in Construction Management",
-    score: "2024 – 2026",
+    program: "M.Sc. in Construction Management · School of Engineering",
+    score: "2083 BS · Distinction · CGPA 3.77",
   },
   {
     school: "Pulchowk Engineering Campus, IOE",
-    program: "Bachelor in Civil Engineering",
-    score: "79.65%",
+    program: "B.E. Civil Engineering · Tribhuvan University, IOE",
+    score: "2075 BS · First · 79.65%",
   },
-  { school: "Pinnacle Academy", program: "+2 Science", score: "84.10%" },
+  { school: "Pinnacle Academy", program: "+2 Science · HSEB", score: "2071 BS · Distinction · 84.10%" },
+  { school: "Singha Bahini S.S.", program: "SLC", score: "2068 BS · First Division" },
 ];
 
 export function Education() {
@@ -21,7 +22,7 @@ export function Education() {
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow="Education" title="Academic background" />
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {items.map((e) => (
             <div
               key={e.school}
