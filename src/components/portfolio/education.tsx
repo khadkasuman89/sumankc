@@ -3,6 +3,11 @@ import { SectionHeading } from "./section-heading";
 
 const items = [
   {
+    school: "Tribhuvan University, Nepal",
+    program: "LL.B. (3-year) · Faculty of Law",
+    score: "2083 BS · Ongoing",
+  },
+  {
     school: "Mid-West University, Surkhet",
     program: "M.Sc. in Construction Management · School of Engineering",
     score: "2083 BS · Distinction · CGPA 3.77",
@@ -15,6 +20,7 @@ const items = [
   { school: "Pinnacle Academy", program: "+2 Science · HSEB", score: "2071 BS · Distinction · 84.10%" },
   { school: "Singha Bahini S.S.", program: "SLC", score: "2068 BS · First Division" },
 ];
+
 
 export function Education() {
   return (
