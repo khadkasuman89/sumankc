@@ -85,7 +85,18 @@ export function Contact() {
                 </a>
               ))}
             </div>
+
+            <div className="overflow-hidden border border-border bg-card shadow-card">
+              <iframe
+                title="Map of Itahari, Sunsari, Nepal"
+                src="https://www.google.com/maps?q=Itahari,+Sunsari,+Nepal&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-64 w-full border-0"
+              />
+            </div>
           </div>
+
 
           <form
             onSubmit={onSubmit}
