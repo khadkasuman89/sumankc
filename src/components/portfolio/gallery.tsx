@@ -1,10 +1,10 @@
 import { SectionHeading } from "./section-heading";
-import portrait from "@/assets/suman-portrait.jpg.asset.json";
-import couple from "@/assets/suman-baneeka.jpg.asset.json";
+import portrait from "@/assets/suman-portrait.png";
+import couple from "@/assets/suman-baneeka.jpg";
 
 const photos = [
-  { src: portrait.url, alt: "Er. Suman Khadka — official portrait", caption: "Official Portrait" },
-  { src: couple.url, alt: "Er. Suman Khadka with Mrs. Baneeka Thapa Khadka", caption: "With Mrs. Baneeka Thapa Khadka" },
+  { src: portrait, alt: "Er. Suman Khadka — official portrait", caption: "Official Portrait" },
+  { src: couple, alt: "Er. Suman Khadka with Mrs. Baneeka Thapa Khadka", caption: "With Mrs. Baneeka Thapa Khadka" },
 ];
 
 export function Gallery() {
