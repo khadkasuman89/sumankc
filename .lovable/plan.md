@@ -1,48 +1,37 @@
-# Redesign: Structural Sophistication
+# Portfolio update — layout, images, research DOIs
 
-Full visual overhaul of the portfolio. All existing content stays intact — only the design system, layout, and section compositions change.
+## 1. Date & time at the top
+Move the Nepali BS date/time card out of the hero body and into a slim strip pinned at the very top of the homepage, above the navbar, so it is the first thing visible on desktop and mobile.
 
-## Design tokens (locked)
-- **Palette (Navy Trust)**: `--navy-deep #0f1b3d`, `--navy #1e3a5f`, `--steel #3b6fa0`, `--paper #e8edf3`, white
-- **Fonts**: Sora (700/600) for headings, Manrope (400/500/700) for body — loaded via `<link>` in `src/routes/__root.tsx`
-- **Layout**: split-screen hero (paper-left / navy-right), authoritative and engineered
+## 2. Photos not loading on Vercel (via GitHub)
+Cause: the images are currently referenced through Lovable's CDN pointer URLs (`/__l5e/assets-v1/...`). That path is served only by Lovable hosting, so on a Vercel deployment those requests 404 and the images stay blank.
 
-## Files to edit
+Fix: store the portrait, the couple photo and the CV inside the repository (`src/assets/`) and reference them through normal imports so Vite bundles them into the build. Then they load identically on Lovable, Vercel, or any static host.
 
-### 1. `src/routes/__root.tsx`
-- Add Google Fonts `<link>` preconnects and stylesheet for Sora + Manrope.
+## 3. Research section — full citations with DOI links
+Rewrite the three entries with journal/volume/page detail and a clickable DOI link each:
+- 2026 — *A Study on Bidding Trend and Performance of Construction Projects: A Case Study of Water Supply Projects in Koshi Province, Nepal* — International Journal on Engineering Technology and Infrastructure Development 2(2):197–211 — doi.org/10.3126/injet-indev.v2i2.95726
+- 2025 — *Evaluation of Factors Causing Cost Variation in Construction of Water Supply Projects in Nepal* — Mid-West University Journal of Engineering & Innovation 1:119–135 — doi.org/10.3126/mujoei.v1i1.91107
+- 2018 — *Ranking of Public Bus Alternatives Using Hybrid Multi-Criteria Decision Making Approach Under Fuzzy Environment: A Case Study of Kathmandu* — October 2018, co-authors Anil Marsani, Subid Ghimire, Saurav Parajuli and others (7 authors total)
 
-### 2. `src/styles.css`
-- Redefine core semantic tokens in `oklch`:
-  - `--background`, `--foreground`, `--primary` (steel), `--primary-glow`, `--secondary`, `--accent`, `--muted`, `--border`, `--card` — all in Navy Trust range
-  - Both `:root` (light: paper bg, navy text) and `.dark` (deep navy bg, paper text)
-- Update `--gradient-primary` (navy→steel), `--gradient-subtle` (paper tints), `--shadow-elegant` (navy-tinted)
-- Set `--font-sans: "Manrope"`, `--font-display: "Sora"` in `@theme`
-- Utility class `.text-gradient` reworked for steel→paper
-- `.glass` background retuned to navy/paper
+Each card gets a "View paper (DOI)" link opening in a new tab. The 2018 paper has no DOI supplied, so it will show authors and venue without a DOI link unless you provide one.
 
-### 3. Section components — recomposed to prototype
-- **`navbar.tsx`** — dark navy fixed bar, `S.KHADKA` monogram + Sora, steel hover, pill "Resume/Hire" CTA in steel
-- **`hero.tsx`** — split-screen: left paper panel with `CIVIL ENGINEER` eyebrow + massive Sora name + two square CTAs; right navy panel with radial-glow + portrait card (grayscale→color on hover)
-- **`about.tsx`** — 12-col grid: 7 cols bio, 5 cols stat cards (Years / Projects / Master's callout) using paper / navy / deep-navy card stack with border-b steel accent
-- **`experience.tsx`** — dark navy band, single vertical timeline with steel dots + navy connector, period label + role + org + description per entry (keeps all 4 roles)
-- **`research.tsx`** — light paper band with steel-bordered feature card and technical DOI-style meta line
-- **`skills.tsx`** — paper band, 2-col spec sheet with uppercase category labels + horizontal bar meters in steel / navy (keeps all existing skill entries and percentages)
-- **`education.tsx`** — 3 cards on paper, uniform navy header + steel percent chip
-- **`gallery.tsx`** — restyle frames only (thin steel border, hover lift), keep existing images
-- **`contact.tsx`** — one giant rounded-3xl split panel: deep-navy left with contact chips + socials, white right with form; Send button in deep navy → steel hover
-- **`footer.tsx`** — deep-navy strip, paper text, steel social links
-- **`floating-actions.tsx`** — swap gradient to solid steel for scroll-top; keep WhatsApp green
+## 4. Skills — names only
+Remove the percentages and progress bars. Each group becomes a clean list of skill names (chips), keeping the three groups: Engineering Software, Technical Skills, Web & Computer.
 
-## Content preservation
-All names, dates, bullets, research paper, skill labels/percentages, education entries, gallery images, and the `khadkasuman89@gmail.com` email are copied verbatim from current files. No copy is rewritten.
+## 5. Education — add LLB
+Add a card: **LL.B. (3-year)**, Tribhuvan University, Nepal — commenced 2083 BS (ongoing).
+
+## 6. Contact — Google Map for Itahari
+Add an embedded map of Itahari, Sunsari below the contact details, and update the Location line from Myanglung to Itahari, Sunsari, Nepal. The map uses a plain Google Maps embed (no API key needed), so it works on Vercel too.
+
+## 7. Gallery + cover photo
+Use the newly uploaded studio portrait (25X30 passlens) as the hero cover photo, replacing the current one, and also refresh the gallery portrait with it. The photo with Mrs. Baneeka Thapa Khadka stays. If you meant additional gallery photos, attach them and I'll add them in the same grid.
+
+## 8. Navigation order
+Reorder the tabs to: Home · About · Experience · Gallery · Education · Research · Contact. The Skills tab is removed from the navbar (the Skills section itself stays on the page, reachable by scrolling) — tell me if you'd rather delete the Skills section entirely.
 
 ## Technical notes
-- No new packages. Sora + Manrope come from Google Fonts via root head `<link>` (never `@import` remote URLs in `styles.css`).
-- Keep `nitro: true` in `vite.config.ts` untouched.
-- Semantic tokens only — no hardcoded `bg-[#0f1b3d]` in components; new palette added to `styles.css` under `:root` and referenced via `bg-primary`, `bg-navy-deep`, etc. via `@theme` custom color tokens (e.g. `--color-navy-deep`, `--color-steel`, `--color-paper`).
-- All sections keep their existing `id="…"` anchors so nav links keep working.
-- Route `head()` metadata unchanged.
-
-## Out of scope
-- No content edits, no new sections, no new features, no MCP changes, no backend work.
+- Files touched: `src/routes/index.tsx` (top strip placement, JSON-LD location), `src/components/portfolio/nepali-clock.tsx`, `hero.tsx`, `navbar.tsx`, `skills.tsx`, `education.tsx`, `research.tsx`, `contact.tsx`, `gallery.tsx`.
+- Images move from `.asset.json` CDN pointers to bundled imports in `src/assets/`; the CV PDF gets the same treatment so its download link works off-Lovable.
+- `vite.config.ts` keeps `nitro: true`; contact email stays khadkasuman89@gmail.com.
