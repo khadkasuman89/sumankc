@@ -22,7 +22,7 @@ export function Gallery() {
           description="A glimpse into life beyond engineering."
         />
 
-        <div className="grid gap-6 sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {photos.map((p) => (
             <figure
               key={p.src}
