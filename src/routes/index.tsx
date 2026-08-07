@@ -44,7 +44,7 @@ export const Route = createFileRoute("/")({
           url: "https://suman-khadka.com.np",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Myanglung, Terhathum",
+            addressLocality: "Itahari, Sunsari",
             addressCountry: "Nepal",
           },
           worksFor: {

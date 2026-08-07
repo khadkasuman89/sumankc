@@ -2,16 +2,15 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
+import { NepaliClock } from "./nepali-clock";
 
 const links = [
   { href: "#home", label: "Home" },
   { href: "#about", label: "About" },
   { href: "#experience", label: "Experience" },
-  { href: "#research", label: "Research" },
-  { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
-  
   { href: "#gallery", label: "Gallery" },
+  { href: "#education", label: "Education" },
+  { href: "#research", label: "Research" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -34,6 +33,12 @@ export function Navbar() {
           : "bg-background/80 backdrop-blur-sm"
       }`}
     >
+      <div className="border-b border-border/60 bg-paper">
+        <div className="mx-auto flex max-w-7xl justify-center px-4 py-1.5 sm:px-6 lg:justify-end lg:px-8">
+          <NepaliClock />
+        </div>
+      </div>
+
       <nav className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-3 sm:px-6 lg:px-8">
         <a href="#home" className="font-display text-2xl text-foreground">
           Suman <span className="italic text-primary">Khadka</span>

@@ -54,7 +54,7 @@ export function Contact() {
             {[
               { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com", href: "mailto:khadkasuman89@gmail.com" },
               { icon: Phone, label: "Phone", value: "+977 9818486399", href: "tel:+9779818486399" },
-              { icon: MapPin, label: "Location", value: "Myanglung, Terhathum, Nepal", href: "https://maps.google.com/?q=Myanglung+Terhathum+Nepal" },
+              { icon: MapPin, label: "Location", value: "Itahari, Sunsari, Nepal", href: "https://maps.google.com/?q=Itahari+Sunsari+Nepal" },
             ].map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
@@ -85,7 +85,18 @@ export function Contact() {
                 </a>
               ))}
             </div>
+
+            <div className="overflow-hidden border border-border bg-card shadow-card">
+              <iframe
+                title="Map of Itahari, Sunsari, Nepal"
+                src="https://www.google.com/maps?q=Itahari,+Sunsari,+Nepal&output=embed"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="h-64 w-full border-0"
+              />
+            </div>
           </div>
+
 
           <form
             onSubmit={onSubmit}

@@ -1,7 +1,6 @@
 import { Download, Mail, BadgeCheck, Building2 } from "lucide-react";
-import portrait from "@/assets/suman-portrait.jpg.asset.json";
-import cv from "@/assets/suman-cv-updated.pdf.asset.json";
-import { NepaliClock } from "@/components/portfolio/nepali-clock";
+import portrait from "@/assets/suman-portrait.png";
+import cv from "@/assets/suman-cv.pdf";
 
 
 export function Hero() {
@@ -36,7 +35,7 @@ export function Hero() {
               <Mail className="h-4 w-4" /> Collaborate
             </a>
             <a
-              href={cv.url}
+              href={cv}
               download
               target="_blank"
               rel="noopener noreferrer"
@@ -46,9 +45,6 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-8 max-w-lg">
-            <NepaliClock />
-          </div>
           <dl className="mt-9 grid max-w-2xl grid-cols-2 gap-x-8 gap-y-5 border-t border-border pt-7 sm:grid-cols-3">
             <div><dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">Experience</dt><dd className="mt-1 font-display text-2xl italic">7+ years</dd></div>
             <div><dt className="text-xs uppercase tracking-[0.18em] text-muted-foreground">NEC</dt><dd className="mt-1 font-display text-2xl italic">20971 Civil A</dd></div>
@@ -61,7 +57,7 @@ export function Hero() {
       <div className="relative lg:col-span-5 lg:pl-4">
         <div className="relative aspect-[4/5] w-full overflow-hidden bg-muted shadow-elegant">
           <img
-            src={portrait.url}
+            src={portrait}
             alt="Er. Suman Khadka — Civil Engineer, Government of Nepal"
             className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-[1.025]"
           />
