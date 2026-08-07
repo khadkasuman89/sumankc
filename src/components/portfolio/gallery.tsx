@@ -1,11 +1,16 @@
 import { SectionHeading } from "./section-heading";
 import portrait from "@/assets/suman-portrait.png";
 import couple from "@/assets/suman-baneeka.jpg";
+import weddingCeremony from "@/assets/wedding-ceremony.jpg";
+import weddingPortrait from "@/assets/wedding-portrait.jpg";
 
 const photos = [
   { src: portrait, alt: "Er. Suman Khadka — official portrait", caption: "Official Portrait" },
   { src: couple, alt: "Er. Suman Khadka with Mrs. Baneeka Thapa Khadka", caption: "With Mrs. Baneeka Thapa Khadka" },
+  { src: weddingCeremony, alt: "Wedding ceremony of Er. Suman Khadka and Mrs. Baneeka Thapa Khadka", caption: "Wedding Ceremony" },
+  { src: weddingPortrait, alt: "Er. Suman Khadka and Mrs. Baneeka Thapa Khadka in traditional wedding attire", caption: "Wedding Portrait" },
 ];
+
 
 export function Gallery() {
   return (
