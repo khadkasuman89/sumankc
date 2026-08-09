@@ -9,6 +9,11 @@ import teamOffice from "@/assets/team-office.png";
 import paddleboard from "@/assets/paddleboard-pokhara.jpg";
 import mustangLake from "@/assets/mustang-lake.jpg";
 import marpha from "@/assets/marpha-traditional.jpg";
+import familyBuddhaPark from "@/assets/family-buddha-park.jpg";
+import teaGarden from "@/assets/tea-garden.jpg";
+import highwayRoadcut from "@/assets/highway-roadcut.jpg";
+import mirikLake from "@/assets/mirik-lake.jpg";
+import familyShivaTemple from "@/assets/family-shiva-temple.jpg";
 
 const photos = [
   { src: portrait, alt: "Er. Suman Khadka — official portrait", caption: "Official Portrait" },
@@ -21,6 +26,11 @@ const photos = [
   { src: paddleboard, alt: "Er. Suman Khadka paddleboarding on Phewa Lake, Pokhara", caption: "Phewa Lake, Pokhara" },
   { src: mustangLake, alt: "Er. Suman Khadka by a turquoise lake in Mustang", caption: "Mustang Highlands" },
   { src: marpha, alt: "Er. Suman Khadka and Mrs. Baneeka Thapa Khadka in Thakali traditional dress", caption: "Traditional Thakali Attire" },
+  { src: familyBuddhaPark, alt: "Er. Suman Khadka with family at Buddha Park, Ravangla", caption: "Family at Buddha Park" },
+  { src: familyShivaTemple, alt: "Er. Suman Khadka with family at Char Dham Shiva temple", caption: "Family Pilgrimage" },
+  { src: teaGarden, alt: "Er. Suman Khadka at a hillside tea garden", caption: "Hillside Tea Gardens" },
+  { src: mirikLake, alt: "Er. Suman Khadka beside a hill station lake", caption: "Lakeside Retreat" },
+  { src: highwayRoadcut, alt: "Er. Suman Khadka on a highway beside a rock cut slope", caption: "On the Highway" },
 ];
 
 
