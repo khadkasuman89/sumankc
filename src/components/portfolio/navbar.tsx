@@ -49,7 +49,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className="px-4 py-2 font-nav text-[15px] font-bold tracking-tight text-foreground transition-colors hover:text-primary"
               >
                 {l.label}
               </a>
