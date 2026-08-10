@@ -15,6 +15,7 @@ export default defineTool({
       location: "Myanglung, Terhathum, Koshi Province, Nepal",
       spouse: "Mrs. Baneeka Thapa Khadka",
       email: "khadkasuman89@gmail.com",
+      officialEmail: "suman.khadka1@nepal.gov.np",
       phone: "+977 9818486399",
       website: "https://sumankc.lovable.app",
       socials: {

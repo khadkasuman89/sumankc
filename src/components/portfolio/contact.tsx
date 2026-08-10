@@ -53,6 +53,7 @@ export function Contact() {
           <div className="lg:col-span-2 space-y-4">
             {[
               { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com", href: "mailto:khadkasuman89@gmail.com" },
+              { icon: Mail, label: "Official Email", value: "suman.khadka1@nepal.gov.np", href: "mailto:suman.khadka1@nepal.gov.np" },
               { icon: Phone, label: "Phone", value: "+977 9818486399", href: "tel:+9779818486399" },
               { icon: MapPin, label: "Location", value: "Itahari, Sunsari, Nepal", href: "https://maps.google.com/?q=Itahari+Sunsari+Nepal" },
             ].map(({ icon: Icon, label, value, href }) => (

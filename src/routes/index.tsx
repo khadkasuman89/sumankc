@@ -40,6 +40,7 @@ export const Route = createFileRoute("/")({
           name: "Er. Suman Khadka",
           jobTitle: "Gazetted (Class III) Engineer (Civil)",
           email: "mailto:khadkasuman89@gmail.com",
+          sameAs: ["mailto:suman.khadka1@nepal.gov.np"],
           telephone: "+977-9818486399",
           url: "https://suman-khadka.com.np",
           address: {

@@ -5,6 +5,7 @@ const info = [
   { icon: MapPin, label: "Home", value: "Myanglung, Terhathum, Koshi Province" },
   { icon: Building2, label: "Position", value: "Gazetted (Class III), Engineer (Civil)" },
   { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com" },
+  { icon: Mail, label: "Official Email", value: "suman.khadka1@nepal.gov.np" },
   { icon: Heart, label: "Spouse", value: "Mrs. Baneeka Thapa Khadka" },
 ];
 
