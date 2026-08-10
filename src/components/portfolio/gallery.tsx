@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SectionHeading } from "./section-heading";
 import portrait from "@/assets/suman-portrait.png";
 import couple from "@/assets/suman-baneeka.jpg";
