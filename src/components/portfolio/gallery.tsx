@@ -33,9 +33,12 @@ const photos = [
   { src: highwayRoadcut, alt: "Er. Suman Khadka on a highway beside a rock cut slope", caption: "On the Highway" },
 ];
 
-
+const PREVIEW_COUNT = 6;
 
 export function Gallery() {
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? photos : photos.slice(0, PREVIEW_COUNT);
+
   return (
     <section id="gallery" className="relative py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -46,7 +49,7 @@ export function Gallery() {
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {photos.map((p) => (
+          {visible.map((p) => (
             <figure
               key={p.src}
               className="group relative overflow-hidden border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
@@ -65,6 +68,19 @@ export function Gallery() {
             </figure>
           ))}
         </div>
+
+        {photos.length > PREVIEW_COUNT && (
+          <div className="mt-10 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowAll((v) => !v)}
+              className="inline-flex items-center gap-2 border border-foreground px-7 py-4 font-nav text-sm font-bold uppercase tracking-[0.14em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+            >
+              {showAll ? "Show fewer photos" : `View all ${photos.length} photos`}
+              <span aria-hidden>{showAll ? "↑" : "↓"}</span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   );
