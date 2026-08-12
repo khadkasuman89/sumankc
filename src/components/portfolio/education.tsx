@@ -1,35 +1,17 @@
 import { GraduationCap } from "lucide-react";
 import { SectionHeading } from "./section-heading";
-
-const items = [
-  {
-    school: "Tribhuvan University, Nepal",
-    program: "LL.B. (3-year) · Faculty of Law",
-    score: "2083 BS · Ongoing",
-  },
-  {
-    school: "Mid-West University, Surkhet",
-    program: "M.Sc. in Construction Management · School of Engineering",
-    score: "2083 BS · Distinction · CGPA 3.77",
-  },
-  {
-    school: "Pulchowk Engineering Campus, IOE",
-    program: "B.E. Civil Engineering · Tribhuvan University, IOE",
-    score: "2075 BS · First · 79.65%",
-  },
-  { school: "Pinnacle Academy", program: "+2 Science · HSEB", score: "2071 BS · Distinction · 84.10%" },
-  { school: "Singha Bahini S.S.", program: "SLC", score: "2068 BS · First Division" },
-];
-
+import { useI18n } from "@/lib/i18n";
 
 export function Education() {
+  const { t } = useI18n();
+
   return (
     <section id="education" className="relative py-20 lg:py-28">
       <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Education" title="Academic background" />
+        <SectionHeading eyebrow={t.education.eyebrow} title={t.education.title} />
 
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {items.map((e) => (
+          {t.education.items.map((e) => (
             <div
               key={e.school}
               className="rounded-3xl border border-border bg-card p-6 shadow-card"

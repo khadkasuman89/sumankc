@@ -1,52 +1,15 @@
 import { Briefcase } from "lucide-react";
 import { SectionHeading } from "./section-heading";
-
-const items = [
-  {
-    org: "Government of Nepal",
-    role: "Gazetted (Class III), Engineer (Civil)",
-    period: "2079 BS – Present",
-    bullets: [
-      "Contract administration and construction supervision for water supply and sewerage infrastructure",
-      "Procurement documents, IPC payments and completion certification under World Bank/ADB Small Works standards",
-      "Quality assurance including concrete cube testing and NDT protocols",
-    ],
-  },
-  {
-    org: "Myanglung Municipality",
-    role: "Civil Engineer",
-    period: "2076 – 2079 BS",
-    bullets: [
-      "Led the municipality’s technical department in Terhathum",
-      "Planning, design, municipal drawing approval, cost estimation and valuation of civil works",
-    ],
-  },
-  {
-    org: "Design Core Systems Pvt. Ltd.",
-    role: "Civil Engineer",
-    period: "2075 – 2076 BS",
-    bullets: [
-      "Drainage design and analysis for land development projects across cities in the United States",
-      "Estimation and quantity surveying for traffic, storm sewer, roads, hydraulic and sanitary sewer projects",
-    ],
-  },
-  {
-    org: "Himalayan Prefab Pvt. Ltd.",
-    role: "Civil Engineer",
-    period: "2075 Bhadra – Falgun",
-    bullets: [
-      "Design and analysis of steel and prefab structures",
-      "Site supervision, coordination, cost estimates and BOQ preparation",
-    ],
-  },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function Experience() {
+  const { t } = useI18n();
+  const items = t.experience.items;
+
   return (
     <section id="experience" className="relative py-20 lg:py-28 bg-navy-deep text-paper">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading eyebrow="Experience" title="Professional Journey" invert />
-
+        <SectionHeading eyebrow={t.experience.eyebrow} title={t.experience.title} invert />
 
         <div className="relative mx-auto max-w-3xl">
           <div className="absolute left-4 top-2 bottom-2 w-px bg-gradient-to-b from-primary via-primary/40 to-transparent md:left-1/2" />
@@ -81,7 +44,6 @@ export function Experience() {
                     ))}
                   </ul>
                 </div>
-
               </div>
             ))}
           </div>
