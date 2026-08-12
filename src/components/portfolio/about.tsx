@@ -1,36 +1,33 @@
 import { MapPin, Mail, Heart, Building2 } from "lucide-react";
 import { SectionHeading } from "./section-heading";
-
-const info = [
-  { icon: MapPin, label: "Home", value: "Myanglung, Terhathum, Koshi Province" },
-  { icon: Building2, label: "Position", value: "Gazetted (Class III), Engineer (Civil)" },
-  { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com" },
-  { icon: Mail, label: "Official Email", value: "suman.khadka1@nepal.gov.np" },
-  { icon: Heart, label: "Spouse", value: "Mrs. Baneeka Thapa Khadka" },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function About() {
+  const { t } = useI18n();
+  const a = t.about;
+  const info = [
+    { icon: MapPin, label: a.info.home.label, value: a.info.home.value },
+    { icon: Building2, label: a.info.position.label, value: a.info.position.value },
+    { icon: Mail, label: a.info.email.label, value: "khadkasuman89@gmail.com" },
+    { icon: Mail, label: a.info.officialEmail.label, value: "suman.khadka1@nepal.gov.np" },
+    { icon: Heart, label: a.info.spouse.label, value: a.info.spouse.value },
+  ];
+
   return (
     <section id="about" className="relative py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="About Me"
-          title="Engineering rooted in research & rigor"
-        />
+        <SectionHeading eyebrow={a.eyebrow} title={a.title} />
 
         <div className="grid gap-10 lg:grid-cols-5">
           <div className="lg:col-span-3 space-y-5 text-base leading-relaxed text-muted-foreground">
             <p>
-              <span className="font-semibold text-foreground">Er. Suman Khadka</span> is a Civil
-               Engineer serving the <span className="font-semibold text-foreground">Government of Nepal</span>. His work centers on infrastructure delivery, especially water supply and sewerage projects, with responsibility for contract administration, construction supervision, procurement review, IPC payments, completion certification, and quality assurance.
+              <span className="font-semibold text-foreground">{a.p1a}</span> {a.p1b}{" "}
+              <span className="font-semibold text-foreground">{a.p1c}</span>
+              {a.p1d}
             </p>
+            <p>{a.p2}</p>
             <p>
-               With more than seven years of professional practice, he combines field engineering with research in public procurement policy and contractor performance. He earned an M.Sc. in Construction Management from Mid-West University with distinction (CGPA 3.77) and a B.E. in Civil Engineering from Pulchowk Campus with 79.65%.
-            </p>
-            <p>
-               His practice blends AutoCAD, Civil 3D, ETABS, SketchUp, Smart Road, and MS Office with procurement management, BOQ preparation, quality verification, stakeholder coordination, and regulatory decision-making.
-              Happily married to <span className="font-semibold text-foreground">Mrs. Baneeka
-              Thapa Khadka</span>.
+              {a.p3a} <span className="font-semibold text-foreground">{a.p3b}</span>.
             </p>
           </div>
 
