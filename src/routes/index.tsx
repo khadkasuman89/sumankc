@@ -12,6 +12,7 @@ import { Gallery } from "@/components/portfolio/gallery";
 import { Contact } from "@/components/portfolio/contact";
 import { Footer } from "@/components/portfolio/footer";
 import { FloatingActions } from "@/components/portfolio/floating-actions";
+import { LanguageProvider } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
   head: () => ({
