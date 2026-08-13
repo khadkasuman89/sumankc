@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SectionHeading } from "./section-heading";
+import { useI18n } from "@/lib/i18n";
 import portrait from "@/assets/suman-portrait.png";
 import couple from "@/assets/suman-baneeka.jpg";
 import weddingCeremony from "@/assets/wedding-ceremony.jpg";
@@ -17,36 +18,38 @@ import mirikLake from "@/assets/mirik-lake.jpg";
 import familyShivaTemple from "@/assets/family-shiva-temple.jpg";
 
 const photos = [
-  { src: portrait, alt: "Er. Suman Khadka — official portrait", caption: "Official Portrait" },
-  { src: couple, alt: "Er. Suman Khadka with Mrs. Baneeka Thapa Khadka", caption: "With Mrs. Baneeka Thapa Khadka" },
-  { src: weddingCeremony, alt: "Wedding ceremony of Er. Suman Khadka and Mrs. Baneeka Thapa Khadka", caption: "Wedding Ceremony" },
-  { src: engagementPortrait, alt: "Er. Suman Khadka and Mrs. Baneeka Thapa Khadka in traditional attire by the water", caption: "Engagement Portrait" },
-  { src: coupleSaree, alt: "Er. Suman Khadka with Mrs. Baneeka Thapa Khadka in red saree", caption: "Together in Nepal" },
-  { src: redCarpet, alt: "Er. Suman Khadka at a ceremonial event", caption: "Ceremonial Event" },
-  { src: teamOffice, alt: "Er. Suman Khadka with project team at the divisional office", caption: "Project Team" },
-  { src: paddleboard, alt: "Er. Suman Khadka paddleboarding on Phewa Lake, Pokhara", caption: "Phewa Lake, Pokhara" },
-  { src: mustangLake, alt: "Er. Suman Khadka by a turquoise lake in Mustang", caption: "Mustang Highlands" },
-  { src: marpha, alt: "Er. Suman Khadka and Mrs. Baneeka Thapa Khadka in Thakali traditional dress", caption: "Traditional Thakali Attire" },
-  { src: familyBuddhaPark, alt: "Er. Suman Khadka with family at Buddha Park, Ravangla", caption: "Family at Buddha Park" },
-  { src: familyShivaTemple, alt: "Er. Suman Khadka with family at Char Dham Shiva temple", caption: "Family Pilgrimage" },
-  { src: teaGarden, alt: "Er. Suman Khadka at a hillside tea garden", caption: "Hillside Tea Gardens" },
-  { src: mirikLake, alt: "Er. Suman Khadka beside a hill station lake", caption: "Lakeside Retreat" },
-  { src: highwayRoadcut, alt: "Er. Suman Khadka on a highway beside a rock cut slope", caption: "On the Highway" },
+  { src: portrait, alt: "Er. Suman Khadka — official portrait" },
+  { src: couple, alt: "Er. Suman Khadka with Mrs. Baneeka Thapa Khadka" },
+  { src: weddingCeremony, alt: "Wedding ceremony of Er. Suman Khadka and Mrs. Baneeka Thapa Khadka" },
+  { src: engagementPortrait, alt: "Er. Suman Khadka and Mrs. Baneeka Thapa Khadka in traditional attire by the water" },
+  { src: coupleSaree, alt: "Er. Suman Khadka with Mrs. Baneeka Thapa Khadka in red saree" },
+  { src: redCarpet, alt: "Er. Suman Khadka at a ceremonial event" },
+  { src: teamOffice, alt: "Er. Suman Khadka with project team at the divisional office" },
+  { src: paddleboard, alt: "Er. Suman Khadka paddleboarding on Phewa Lake, Pokhara" },
+  { src: mustangLake, alt: "Er. Suman Khadka by a turquoise lake in Mustang" },
+  { src: marpha, alt: "Er. Suman Khadka and Mrs. Baneeka Thapa Khadka in Thakali traditional dress" },
+  { src: familyBuddhaPark, alt: "Er. Suman Khadka with family at Buddha Park, Ravangla" },
+  { src: familyShivaTemple, alt: "Er. Suman Khadka with family at Char Dham Shiva temple" },
+  { src: teaGarden, alt: "Er. Suman Khadka at a hillside tea garden" },
+  { src: mirikLake, alt: "Er. Suman Khadka beside a hill station lake" },
+  { src: highwayRoadcut, alt: "Er. Suman Khadka on a highway beside a rock cut slope" },
 ];
 
 const PREVIEW_COUNT = 6;
 
 export function Gallery() {
   const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? photos : photos.slice(0, PREVIEW_COUNT);
+  const { t } = useI18n();
+  const items = photos.map((p, i) => ({ ...p, caption: t.gallery.captions[i] ?? "" }));
+  const visible = showAll ? items : items.slice(0, PREVIEW_COUNT);
 
   return (
     <section id="gallery" className="relative py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
-          eyebrow="Gallery"
-          title="Moments & memories"
-          description="A glimpse into life beyond engineering."
+          eyebrow={t.gallery.eyebrow}
+          title={t.gallery.title}
+          description={t.gallery.description}
         />
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -77,7 +80,7 @@ export function Gallery() {
               onClick={() => setShowAll((v) => !v)}
               className="inline-flex items-center gap-2 border border-foreground px-7 py-4 font-nav text-sm font-bold uppercase tracking-[0.14em] text-foreground transition-colors hover:bg-foreground hover:text-background"
             >
-              {showAll ? "Show fewer photos" : `View all ${photos.length} photos`}
+              {showAll ? t.gallery.showFewer : t.gallery.viewAll(photos.length)}
               <span aria-hidden>{showAll ? "↑" : "↓"}</span>
             </button>
           </div>
