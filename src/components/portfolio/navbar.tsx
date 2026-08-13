@@ -2,21 +2,24 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
+import { LanguageToggle } from "./language-toggle";
 import { NepaliClock } from "./nepali-clock";
-
-const links = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#education", label: "Education" },
-  { href: "#research", label: "Research" },
-  { href: "#contact", label: "Contact" },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t } = useI18n();
+
+  const links = [
+    { href: "#home", label: t.nav.home },
+    { href: "#about", label: t.nav.about },
+    { href: "#experience", label: t.nav.experience },
+    { href: "#gallery", label: t.nav.gallery },
+    { href: "#education", label: t.nav.education },
+    { href: "#research", label: t.nav.research },
+    { href: "#contact", label: t.nav.contact },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -58,26 +61,26 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <LanguageToggle />
           <ThemeToggle />
           <Button
             asChild
             size="sm"
             className="hidden bg-primary text-primary-foreground hover:bg-foreground sm:inline-flex"
           >
-            <a href="#contact">Hire Me</a>
+            <a href="#contact">{t.nav.hire}</a>
           </Button>
           <Button
             variant="ghost"
             size="icon"
             className="text-foreground hover:bg-muted lg:hidden"
             onClick={() => setOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-label={t.nav.menu}
           >
             {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </Button>
         </div>
       </nav>
-
 
       {open && (
         <div className="border-t border-border bg-background lg:hidden">
@@ -95,7 +98,6 @@ export function Navbar() {
             ))}
           </ul>
         </div>
-
       )}
     </header>
   );

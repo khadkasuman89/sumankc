@@ -7,13 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { SectionHeading } from "./section-heading";
-
-const schema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100),
-  email: z.string().trim().email("Invalid email").max(255),
-  subject: z.string().trim().min(1, "Subject required").max(150),
-  message: z.string().trim().min(5, "Message too short").max(1000),
-});
+import { useI18n } from "@/lib/i18n";
 
 const socials = [
   { icon: Facebook, href: "https://www.facebook.com/er.sumankhadka", label: "Facebook" },
@@ -23,18 +17,27 @@ const socials = [
 
 export function Contact() {
   const [submitting, setSubmitting] = useState(false);
+  const { t } = useI18n();
+  const c = t.contact;
+
+  const schema = z.object({
+    name: z.string().trim().min(1, c.errors.name).max(100),
+    email: z.string().trim().email(c.errors.email).max(255),
+    subject: z.string().trim().min(1, c.errors.subject).max(150),
+    message: z.string().trim().min(5, c.errors.message).max(1000),
+  });
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const fd = new FormData(e.currentTarget);
     const result = schema.safeParse(Object.fromEntries(fd.entries()));
     if (!result.success) {
-      toast.error(result.error.issues[0]?.message ?? "Please check the form");
+      toast.error(result.error.issues[0]?.message ?? c.errors.generic);
       return;
     }
     setSubmitting(true);
     setTimeout(() => {
-      toast.success("Message sent — I'll get back to you soon!");
+      toast.success(c.success);
       (e.target as HTMLFormElement).reset();
       setSubmitting(false);
     }, 700);
@@ -43,19 +46,15 @@ export function Contact() {
   return (
     <section id="contact" className="relative py-20 lg:py-28 bg-gradient-subtle">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow="Contact"
-          title="Let's build something solid"
-          description="Open to consulting, structural design, and research collaborations."
-        />
+        <SectionHeading eyebrow={c.eyebrow} title={c.title} description={c.description} />
 
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-4">
             {[
-              { icon: Mail, label: "Email", value: "khadkasuman89@gmail.com", href: "mailto:khadkasuman89@gmail.com" },
-              { icon: Mail, label: "Official Email", value: "suman.khadka1@nepal.gov.np", href: "mailto:suman.khadka1@nepal.gov.np" },
-              { icon: Phone, label: "Phone", value: "+977 9818486399", href: "tel:+9779818486399" },
-              { icon: MapPin, label: "Location", value: "Itahari, Sunsari, Nepal", href: "https://maps.google.com/?q=Itahari+Sunsari+Nepal" },
+              { icon: Mail, label: c.email, value: "khadkasuman89@gmail.com", href: "mailto:khadkasuman89@gmail.com" },
+              { icon: Mail, label: c.officialEmail, value: "suman.khadka1@nepal.gov.np", href: "mailto:suman.khadka1@nepal.gov.np" },
+              { icon: Phone, label: c.phone, value: "+977 9818486399", href: "tel:+9779818486399" },
+              { icon: MapPin, label: c.location, value: c.locationValue, href: "https://maps.google.com/?q=Itahari+Sunsari+Nepal" },
             ].map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
@@ -89,7 +88,7 @@ export function Contact() {
 
             <div className="overflow-hidden border border-border bg-card shadow-card">
               <iframe
-                title="Map of Itahari, Sunsari, Nepal"
+                title={c.mapTitle}
                 src="https://www.google.com/maps?q=Itahari,+Sunsari,+Nepal&output=embed"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -98,31 +97,30 @@ export function Contact() {
             </div>
           </div>
 
-
           <form
             onSubmit={onSubmit}
             className="border border-border bg-card p-6 shadow-card md:p-8 lg:col-span-3"
           >
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
-                <Label htmlFor="name">Name</Label>
-                <Input id="name" name="name" placeholder="Your full name" className="mt-1.5" maxLength={100} />
+                <Label htmlFor="name">{c.name}</Label>
+                <Input id="name" name="name" placeholder={c.namePlaceholder} className="mt-1.5" maxLength={100} />
               </div>
               <div>
-                <Label htmlFor="email">Email</Label>
-                <Input id="email" name="email" type="email" placeholder="you@example.com" className="mt-1.5" maxLength={255} />
+                <Label htmlFor="email">{c.email}</Label>
+                <Input id="email" name="email" type="email" placeholder={c.emailPlaceholder} className="mt-1.5" maxLength={255} />
               </div>
             </div>
             <div className="mt-4">
-              <Label htmlFor="subject">Subject</Label>
-              <Input id="subject" name="subject" placeholder="Project inquiry" className="mt-1.5" maxLength={150} />
+              <Label htmlFor="subject">{c.subject}</Label>
+              <Input id="subject" name="subject" placeholder={c.subjectPlaceholder} className="mt-1.5" maxLength={150} />
             </div>
             <div className="mt-4">
-              <Label htmlFor="message">Message</Label>
+              <Label htmlFor="message">{c.message}</Label>
               <Textarea
                 id="message"
                 name="message"
-                placeholder="Tell me about your project…"
+                placeholder={c.messagePlaceholder}
                 rows={6}
                 className="mt-1.5"
                 maxLength={1000}
@@ -134,7 +132,7 @@ export function Contact() {
               size="lg"
               className="mt-6 w-full bg-gradient-primary shadow-elegant hover:opacity-90"
             >
-              <Send className="h-4 w-4" /> {submitting ? "Sending…" : "Send Message"}
+              <Send className="h-4 w-4" /> {submitting ? c.sending : c.send}
             </Button>
           </form>
         </div>
