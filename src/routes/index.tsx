@@ -66,22 +66,23 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Research />
-        <Skills />
-        <Education />
-        
-        <Gallery />
-        <Contact />
-      </main>
-      <Footer />
-      <FloatingActions />
-      <Toaster richColors position="top-right" />
-    </div>
+    <LanguageProvider>
+      <div className="min-h-screen bg-background text-foreground">
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <Experience />
+          <Research />
+          <Skills />
+          <Education />
+          <Gallery />
+          <Contact />
+        </main>
+        <Footer />
+        <FloatingActions />
+        <Toaster richColors position="top-right" />
+      </div>
+    </LanguageProvider>
   );
 }
