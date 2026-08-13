@@ -74,10 +74,10 @@ function Index() {
           <Hero />
           <About />
           <Experience />
+          <Gallery />
+          <Education />
           <Research />
           <Skills />
-          <Education />
-          <Gallery />
           <Contact />
         </main>
         <Footer />
