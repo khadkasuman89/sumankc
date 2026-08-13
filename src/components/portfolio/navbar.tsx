@@ -64,13 +64,6 @@ export function Navbar() {
           <LanguageToggle />
           <ThemeToggle />
           <Button
-            asChild
-            size="sm"
-            className="hidden bg-primary text-primary-foreground hover:bg-foreground sm:inline-flex"
-          >
-            <a href="#contact">{t.nav.hire}</a>
-          </Button>
-          <Button
             variant="ghost"
             size="icon"
             className="text-foreground hover:bg-muted lg:hidden"
