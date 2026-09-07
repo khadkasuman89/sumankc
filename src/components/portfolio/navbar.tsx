@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
 import { LanguageToggle } from "./language-toggle";
 import { NepaliClock } from "./nepali-clock";
+import { SiteSearch } from "./site-search";
+
 import { useI18n } from "@/lib/i18n";
 
 export function Navbar() {
@@ -61,8 +63,10 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <SiteSearch />
           <LanguageToggle />
           <ThemeToggle />
+
           <Button
             variant="ghost"
             size="icon"

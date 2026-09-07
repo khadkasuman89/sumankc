@@ -13,7 +13,7 @@ export default defineTool({
       employer: "Government of Nepal — Department of Water Supply and Sewerage Management (DWSSM)",
       currentPosting: "Government of Nepal",
       location: "Myanglung, Terhathum, Koshi Province, Nepal",
-      spouse: "Mrs. Baneeka Thapa Khadka",
+      spouse: "Mrs. Baneeka Thapa",
       email: "khadkasuman89@gmail.com",
       officialEmail: "suman.khadka1@nepal.gov.np",
       phone: "+977 9818486399",
