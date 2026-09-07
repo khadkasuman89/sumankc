@@ -8,7 +8,7 @@ export function About() {
   const info = [
     { icon: MapPin, label: a.info.home.label, value: a.info.home.value },
     { icon: Building2, label: a.info.position.label, value: a.info.position.value },
-    { icon: Mail, label: a.info.email.label, value: "khadkasuman89@gmail.com" },
+    { icon: Mail, label: a.info.email.label, value: "er.sumankhadka@gmail.com" },
     { icon: Mail, label: a.info.officialEmail.label, value: "suman.khadka1@nepal.gov.np" },
     { icon: Heart, label: a.info.spouse.label, value: a.info.spouse.value },
   ];
