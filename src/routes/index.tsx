@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
             "@type": "GovernmentOrganization",
             name: "Department of Water Supply and Sewerage Management, Government of Nepal",
           },
-          spouse: "Mrs. Baneeka Thapa Khadka",
+          spouse: "Mrs. Baneeka Thapa",
           alumniOf: [
             "Pulchowk Engineering Campus, IOE, Tribhuvan University",
             "Mid-West University, Surkhet",

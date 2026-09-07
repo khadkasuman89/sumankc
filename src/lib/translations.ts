@@ -41,13 +41,13 @@ export const content = {
       p1d: ". His work centers on infrastructure delivery, especially water supply and sewerage projects, with responsibility for contract administration, construction supervision, procurement review, IPC payments, completion certification, and quality assurance.",
       p2: "With more than seven years of professional practice, he combines field engineering with research in public procurement policy and contractor performance. He earned an M.Sc. in Construction Management from Mid-West University with distinction (CGPA 3.77) and a B.E. in Civil Engineering from Pulchowk Campus with 79.65%.",
       p3a: "His practice blends AutoCAD, Civil 3D, ETABS, SketchUp, Smart Road, and MS Office with procurement management, BOQ preparation, quality verification, stakeholder coordination, and regulatory decision-making. Happily married to",
-      p3b: "Mrs. Baneeka Thapa Khadka",
+      p3b: "Mrs. Baneeka Thapa",
       info: {
         home: { label: "Home", value: "Myanglung, Terhathum, Koshi Province" },
         position: { label: "Position", value: "Gazetted (Class III), Engineer (Civil)" },
         email: { label: "Email" },
         officialEmail: { label: "Official Email" },
-        spouse: { label: "Spouse", value: "Mrs. Baneeka Thapa Khadka" },
+        spouse: { label: "Spouse", value: "Mrs. Baneeka Thapa" },
       },
     },
     experience: {
@@ -178,7 +178,7 @@ export const content = {
       showFewer: "Show fewer photos",
       captions: [
         "Official Portrait",
-        "With Mrs. Baneeka Thapa Khadka",
+        "With Mrs. Baneeka Thapa",
         "Wedding Ceremony",
         "Engagement Portrait",
         "Together in Nepal",
