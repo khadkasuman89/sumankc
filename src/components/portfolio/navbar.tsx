@@ -61,8 +61,10 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <SiteSearch />
           <LanguageToggle />
           <ThemeToggle />
+
           <Button
             variant="ghost"
             size="icon"
