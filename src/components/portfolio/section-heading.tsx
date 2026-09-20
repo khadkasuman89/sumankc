@@ -22,7 +22,7 @@ export function SectionHeading({
       </div>
       <h2
          className={`mt-4 font-display text-4xl leading-none sm:text-5xl lg:text-6xl ${
-          invert ? "text-paper" : "text-navy-deep"
+          invert ? "text-paper" : "text-foreground"
         }`}
       >
         {title}

@@ -18,13 +18,19 @@ export function NepaliClock() {
 
   if (!now) return null;
   const bs = adToBs(now);
+  const adDate = new Intl.DateTimeFormat("en-CA", {
+    timeZone: "Asia/Kathmandu",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).format(now);
 
   return (
     <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-navy-deep">
       {bs && (
         <span className="inline-flex items-center gap-2 text-xs font-semibold sm:text-sm">
           <CalendarDays className="h-4 w-4 text-steel" />
-          <span className="tabular-nums">{formatBsNumeric(bs)}</span>
+          <span className="tabular-nums">A.D. {adDate}</span>
           <span className="text-[11px] font-medium text-steel sm:text-xs">
             ({formatBsLong(bs)})
           </span>
