@@ -12,6 +12,7 @@ import { Gallery } from "@/components/portfolio/gallery";
 import { Contact } from "@/components/portfolio/contact";
 import { Footer } from "@/components/portfolio/footer";
 import { FloatingActions } from "@/components/portfolio/floating-actions";
+import { SelectedWorks } from "@/components/portfolio/selected-works";
 import { LanguageProvider } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -76,11 +77,12 @@ function Index() {
           <Hero />
           <About />
           <Experience />
-          <Gallery />
+          <SelectedWorks />
           <Education />
           <Research />
           <Skills />
           <Contact />
+          <Gallery />
         </main>
         <Footer />
         <FloatingActions />
