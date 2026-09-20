@@ -3,7 +3,6 @@ import { CalendarDays, Clock } from "lucide-react";
 import {
   adToBs,
   formatBsLong,
-  formatBsNumeric,
   formatNepaliTime,
 } from "@/lib/nepali-date";
 
