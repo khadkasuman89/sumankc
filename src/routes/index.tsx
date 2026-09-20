@@ -29,6 +29,8 @@ export const Route = createFileRoute("/")({
         content:
           "Public infrastructure delivery, procurement, contract administration, and construction supervision in Nepal.",
       },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],

@@ -8,7 +8,7 @@ export function Skills() {
   const { t } = useI18n();
 
   return (
-    <section id="skills" className="relative py-20 lg:py-28 bg-paper">
+    <section id="skills" className="relative bg-muted py-20 lg:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow={t.skills.eyebrow} title={t.skills.title} />
 
