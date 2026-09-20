@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SectionHeading } from "./section-heading";
 import { useI18n } from "@/lib/i18n";
+import { Button } from "@/components/ui/button";
 import portrait from "@/assets/suman-portrait.png";
 import couple from "@/assets/suman-baneeka.jpg";
 import weddingCeremony from "@/assets/wedding-ceremony.jpg";
@@ -35,7 +36,7 @@ const photos = [
   { src: highwayRoadcut, alt: "Er. Suman Khadka on a highway beside a rock cut slope" },
 ];
 
-const PREVIEW_COUNT = 6;
+const PREVIEW_COUNT = 4;
 
 export function Gallery() {
   const [showAll, setShowAll] = useState(false);
@@ -44,7 +45,7 @@ export function Gallery() {
   const visible = showAll ? items : items.slice(0, PREVIEW_COUNT);
 
   return (
-    <section id="gallery" className="relative py-20 lg:py-28">
+    <section id="personal" className="relative py-24 lg:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading
           eyebrow={t.gallery.eyebrow}
@@ -75,14 +76,16 @@ export function Gallery() {
 
         {photos.length > PREVIEW_COUNT && (
           <div className="mt-10 flex justify-center">
-            <button
+            <Button
               type="button"
+              variant="outline"
+              size="lg"
               onClick={() => setShowAll((v) => !v)}
-              className="inline-flex items-center gap-2 border border-foreground px-7 py-4 font-nav text-sm font-bold uppercase tracking-[0.14em] text-foreground transition-colors hover:bg-foreground hover:text-background"
+              className="h-auto px-7 py-4 font-nav text-sm font-bold uppercase tracking-[0.14em]"
             >
               {showAll ? t.gallery.showFewer : t.gallery.viewAll(photos.length)}
               <span aria-hidden>{showAll ? "↑" : "↓"}</span>
-            </button>
+            </Button>
           </div>
         )}
       </div>

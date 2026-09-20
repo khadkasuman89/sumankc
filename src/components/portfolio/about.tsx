@@ -1,4 +1,4 @@
-import { MapPin, Mail, Heart, Building2 } from "lucide-react";
+import { MapPin, Mail, Building2 } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { useI18n } from "@/lib/i18n";
 
@@ -10,11 +10,10 @@ export function About() {
     { icon: Building2, label: a.info.position.label, value: a.info.position.value },
     { icon: Mail, label: a.info.email.label, value: "er.sumankhadka@gmail.com" },
     { icon: Mail, label: a.info.officialEmail.label, value: "suman.khadka1@nepal.gov.np" },
-    { icon: Heart, label: a.info.spouse.label, value: a.info.spouse.value },
   ];
 
   return (
-    <section id="about" className="relative py-20 lg:py-28">
+    <section id="about" className="relative py-24 lg:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow={a.eyebrow} title={a.title} />
 
@@ -27,7 +26,7 @@ export function About() {
             </p>
             <p>{a.p2}</p>
             <p>
-              {a.p3a} <span className="font-semibold text-foreground">{a.p3b}</span>.
+              {a.p3a}
             </p>
           </div>
 
