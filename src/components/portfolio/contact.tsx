@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Facebook, Instagram, Music2 } from "lucide-react";
+import { Mail, Phone, Send, Facebook, Instagram, Linkedin, BookOpen } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,11 @@ import { useI18n } from "@/lib/i18n";
 const socials = [
   { icon: Facebook, href: "https://www.facebook.com/er.sumankhadka", label: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/Er.sumankhadka", label: "Instagram" },
-  { icon: Music2, href: "https://www.tiktok.com/@er.sumankhadka", label: "TikTok" },
+];
+
+const placeholders = [
+  { icon: Linkedin, label: "LinkedIn" },
+  { icon: BookOpen, label: "ResearchGate / ORCID" },
 ];
 
 export function Contact() {
