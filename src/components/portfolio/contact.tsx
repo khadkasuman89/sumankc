@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, Facebook, Instagram, Music2 } from "lucide-react";
+import { Mail, Phone, Send, Facebook, Instagram, Linkedin, BookOpen } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -12,7 +12,11 @@ import { useI18n } from "@/lib/i18n";
 const socials = [
   { icon: Facebook, href: "https://www.facebook.com/er.sumankhadka", label: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/Er.sumankhadka", label: "Instagram" },
-  { icon: Music2, href: "https://www.tiktok.com/@er.sumankhadka", label: "TikTok" },
+];
+
+const placeholders = [
+  { icon: Linkedin, label: "LinkedIn" },
+  { icon: BookOpen, label: "ResearchGate / ORCID" },
 ];
 
 export function Contact() {
@@ -44,17 +48,15 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-20 lg:py-28 bg-gradient-subtle">
+    <section id="contact" className="relative py-24 lg:py-36 bg-gradient-subtle">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHeading eyebrow={c.eyebrow} title={c.title} description={c.description} />
 
         <div className="grid gap-8 lg:grid-cols-5">
           <div className="lg:col-span-2 space-y-4">
             {[
-              { icon: Mail, label: c.email, value: "er.sumankhadka@gmail.com", href: "mailto:er.sumankhadka@gmail.com" },
-              { icon: Mail, label: c.officialEmail, value: "suman.khadka1@nepal.gov.np", href: "mailto:suman.khadka1@nepal.gov.np" },
               { icon: Phone, label: c.phone, value: "+977 9818486399", href: "tel:+9779818486399" },
-              { icon: MapPin, label: c.location, value: c.locationValue, href: "https://maps.google.com/?q=Itahari+Sunsari+Nepal" },
+              { icon: Mail, label: c.email, value: "er.sumankhadka@gmail.com", href: "mailto:er.sumankhadka@gmail.com" },
             ].map(({ icon: Icon, label, value, href }) => (
               <a
                 key={label}
@@ -71,6 +73,13 @@ export function Contact() {
               </a>
             ))}
 
+            <p className="text-xs text-muted-foreground">
+              {c.officialEmailNote}{" "}
+              <a href="mailto:suman.khadka1@nepal.gov.np" className="font-medium text-foreground underline underline-offset-2">
+                suman.khadka1@nepal.gov.np
+              </a>
+            </p>
+
             <div className="flex flex-wrap gap-2 pt-2">
               {socials.map(({ icon: Icon, href, label }) => (
                 <a
@@ -84,7 +93,22 @@ export function Contact() {
                   <Icon className="h-5 w-5" />
                 </a>
               ))}
+              {placeholders.map(({ icon: Icon, label }) => (
+                <button
+                  key={label}
+                  type="button"
+                  disabled
+                  title={`${label} — ${c.comingSoon}`}
+                  aria-label={`${label} — ${c.comingSoon}`}
+                  className="grid h-11 w-11 cursor-not-allowed place-items-center rounded-xl border border-dashed border-border bg-muted/40 text-muted-foreground/60"
+                >
+                  <Icon className="h-5 w-5" />
+                </button>
+              ))}
             </div>
+            <p className="text-xs text-muted-foreground">
+              LinkedIn · ResearchGate / ORCID — {c.comingSoon}
+            </p>
 
             <div className="overflow-hidden border border-border bg-card shadow-card">
               <iframe

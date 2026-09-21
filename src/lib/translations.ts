@@ -7,7 +7,8 @@ export const content = {
       home: "Home",
       about: "About",
       experience: "Experience",
-      gallery: "Gallery",
+      works: "Selected Works",
+      gallery: "Personal",
       education: "Education",
       research: "Research",
       contact: "Contact",
@@ -40,8 +41,7 @@ export const content = {
       p1c: "Government of Nepal",
       p1d: ". His work centers on infrastructure delivery, especially water supply and sewerage projects, with responsibility for contract administration, construction supervision, procurement review, IPC payments, completion certification, and quality assurance.",
       p2: "With more than seven years of professional practice, he combines field engineering with research in public procurement policy and contractor performance. He earned an M.Sc. in Construction Management from Mid-West University with distinction (CGPA 3.77) and a B.E. in Civil Engineering from Pulchowk Campus with 79.65%.",
-      p3a: "His practice blends AutoCAD, Civil 3D, ETABS, SketchUp, Smart Road, and MS Office with procurement management, BOQ preparation, quality verification, stakeholder coordination, and regulatory decision-making. Happily married to",
-      p3b: "Mrs. Baneeka Thapa",
+      p3a: "His practice blends AutoCAD, Civil 3D, ETABS, SketchUp, Smart Road, and MS Office with procurement management, BOQ preparation, quality verification, stakeholder coordination, and regulatory decision-making.",
       info: {
         home: { label: "Home", value: "Myanglung, Terhathum, Koshi Province" },
         position: { label: "Position", value: "Gazetted (Class III), Engineer (Civil)" },
@@ -57,7 +57,7 @@ export const content = {
         {
           org: "Government of Nepal",
           role: "Gazetted (Class III), Engineer (Civil)",
-          period: "2079 BS – Present",
+          period: "2079 BS (2022 AD) – Present",
           bullets: [
             "Contract administration and construction supervision for water supply and sewerage infrastructure",
             "Procurement documents, IPC payments and completion certification under World Bank/ADB Small Works standards",
@@ -67,7 +67,7 @@ export const content = {
         {
           org: "Myanglung Municipality",
           role: "Civil Engineer",
-          period: "2076 – 2079 BS",
+          period: "2076 – 2079 BS (2019 – 2022 AD)",
           bullets: [
             "Led the municipality’s technical department in Terhathum",
             "Planning, design, municipal drawing approval, cost estimation and valuation of civil works",
@@ -76,7 +76,7 @@ export const content = {
         {
           org: "Design Core Systems Pvt. Ltd.",
           role: "Civil Engineer",
-          period: "2075 – 2076 BS",
+          period: "2075 – 2076 BS (2018 – 2019 AD)",
           bullets: [
             "Drainage design and analysis for land development projects across cities in the United States",
             "Estimation and quantity surveying for traffic, storm sewer, roads, hydraulic and sanitary sewer projects",
@@ -85,11 +85,51 @@ export const content = {
         {
           org: "Himalayan Prefab Pvt. Ltd.",
           role: "Civil Engineer",
-          period: "2075 Bhadra – Falgun",
+          period: "2075 Bhadra – Falgun BS (2018 – 2019 AD)",
           bullets: [
             "Design and analysis of steel and prefab structures",
             "Site supervision, coordination, cost estimates and BOQ preparation",
           ],
+        },
+      ],
+    },
+    works: {
+      eyebrow: "Selected Works",
+      title: "Selected works",
+      description:
+        "Representative assignments from public infrastructure delivery, municipal engineering, and design practice.",
+      items: [
+        {
+          name: "Integrated Water Supply and Sewerage Management Project",
+          agency: "Government of Nepal · DWSSM",
+          role: "Gazetted (Class III) Engineer (Civil) — Contract administration & supervision",
+          description:
+            "Contract administration, construction supervision, IPC payments, and completion certification for water supply and sewerage works under Small Works procurement standards.",
+          status: "Ongoing assignment",
+        },
+        {
+          name: "Municipal Infrastructure Works, Myanglung Municipality",
+          agency: "Myanglung Municipality, Terhathum",
+          role: "Civil Engineer — Head of the technical department",
+          description:
+            "Planning, design, drawing approval, cost estimation, and valuation of municipal civil works across the municipality.",
+          status: "Completed (2076 – 2079 BS)",
+        },
+        {
+          name: "Land Development Drainage Design, United States",
+          agency: "Design Core Systems Pvt. Ltd.",
+          role: "Civil Engineer — Drainage design & quantity surveying",
+          description:
+            "Drainage design and analysis for land development projects, with estimation for traffic, storm sewer, road, hydraulic, and sanitary sewer packages.",
+          status: "Completed (2075 – 2076 BS)",
+        },
+        {
+          name: "Steel & Prefabricated Structures",
+          agency: "Himalayan Prefab Pvt. Ltd.",
+          role: "Civil Engineer — Design, analysis & site supervision",
+          description:
+            "Design and analysis of steel and prefab structures with site supervision, coordination, cost estimates, and BOQ preparation.",
+          status: "Completed (2075 BS)",
         },
       ],
     },
@@ -171,7 +211,7 @@ export const content = {
       ],
     },
     gallery: {
-      eyebrow: "Gallery",
+      eyebrow: "Personal",
       title: "Moments & memories",
       description: "A glimpse into life beyond engineering.",
       viewAll: (n: number) => `View all ${n} photos`,
@@ -200,6 +240,8 @@ export const content = {
       description: "Open to consulting, structural design, and research collaborations.",
       email: "Email",
       officialEmail: "Official Email",
+      officialEmailNote: "Official government email:",
+      comingSoon: "Coming soon",
       phone: "Phone",
       location: "Location",
       locationValue: "Itahari, Sunsari, Nepal",
@@ -234,7 +276,8 @@ export const content = {
       home: "गृहपृष्ठ",
       about: "परिचय",
       experience: "अनुभव",
-      gallery: "तस्बिर संग्रह",
+      works: "छानिएका कार्य",
+      gallery: "व्यक्तिगत",
       education: "शिक्षा",
       research: "अनुसन्धान",
       contact: "सम्पर्क",
@@ -267,8 +310,7 @@ export const content = {
       p1c: "नेपाल सरकार",
       p1d: " मा कार्यरत छन्। उनको कार्यक्षेत्र पूर्वाधार निर्माण, विशेषतः खानेपानी तथा ढल व्यवस्थापन आयोजनामा केन्द्रित छ, जसमा ठेक्का प्रशासन, निर्माण सुपरिवेक्षण, खरिद पुनरावलोकन, चालु भुक्तानी (IPC), कार्य सम्पन्न प्रमाणीकरण तथा गुणस्तर सुनिश्चितता समावेश छन्।",
       p2: "सात वर्षभन्दा बढी पेशागत अनुभवसँगै उनले क्षेत्रगत इन्जिनियरिङलाई सार्वजनिक खरिद नीति र निर्माण व्यवसायीको कार्यसम्पादनसम्बन्धी अनुसन्धानसँग जोडेका छन्। उनले मिड-वेस्ट युनिभर्सिटीबाट निर्माण व्यवस्थापनमा स्नातकोत्तर (विशिष्ट श्रेणी, सी.जी.पी.ए. ३.७७) तथा पुल्चोक क्याम्पसबाट सिविल इन्जिनियरिङमा स्नातक (७९.६५%) उत्तीर्ण गरेका छन्।",
-      p3a: "उनको कार्यशैलीमा AutoCAD, Civil 3D, ETABS, SketchUp, Smart Road र MS Office सँगै खरिद व्यवस्थापन, लागत अनुमान (BOQ), गुणस्तर परीक्षण, सरोकारवाला समन्वय तथा नियमनकारी निर्णय क्षमता समावेश छ। उनको विवाह",
-      p3b: "श्रीमती बनिका थापा",
+      p3a: "उनको कार्यशैलीमा AutoCAD, Civil 3D, ETABS, SketchUp, Smart Road र MS Office सँगै खरिद व्यवस्थापन, लागत अनुमान (BOQ), गुणस्तर परीक्षण, सरोकारवाला समन्वय तथा नियमनकारी निर्णय क्षमता समावेश छ।",
       info: {
         home: { label: "घर", value: "म्याङलुङ, तेह्रथुम, कोशी प्रदेश" },
         position: { label: "पद", value: "राजपत्रांकित तृतीय श्रेणी, इन्जिनियर (सिविल)" },
@@ -284,7 +326,7 @@ export const content = {
         {
           org: "नेपाल सरकार",
           role: "राजपत्रांकित तृतीय श्रेणी, इन्जिनियर (सिविल)",
-          period: "२०७९ साल – हालसम्म",
+          period: "२०७९ सा‍ल (२०२२ ई.) – हालसम्म",
           bullets: [
             "खानेपानी तथा ढल पूर्वाधारको ठेक्का प्रशासन र निर्माण सुपरिवेक्षण",
             "विश्व बैंक/एडीबी स्मल वर्क्स मापदण्ड अनुसार खरिद कागजात, चालु भुक्तानी तथा कार्य सम्पन्न प्रमाणीकरण",
@@ -294,7 +336,7 @@ export const content = {
         {
           org: "म्याङलुङ नगरपालिका",
           role: "सिविल इन्जिनियर",
-          period: "२०७६ – २०७९ साल",
+          period: "२०७६ – २०७९ साल (२०१९ – २०२२ ई.)",
           bullets: [
             "तेह्रथुमस्थित नगरपालिकाको प्राविधिक शाखाको नेतृत्व",
             "योजना, डिजाइन, नक्सा स्वीकृति, लागत अनुमान तथा निर्माण कार्यको मूल्यांकन",
@@ -303,7 +345,7 @@ export const content = {
         {
           org: "डिजाइन कोर सिस्टम्स प्रा. लि.",
           role: "सिविल इन्जिनियर",
-          period: "२०७५ – २०७६ साल",
+          period: "२०७५ – २०७६ साल (२०१८ – २०१९ ई.)",
           bullets: [
             "अमेरिकाका विभिन्न सहरमा भूमि विकास आयोजनाका ढल निकास डिजाइन तथा विश्लेषण",
             "ट्राफिक, स्टर्म सिवर, सडक, हाइड्रोलिक तथा स्यानिटरी सिवर आयोजनाको लागत अनुमान र परिमाण सर्वेक्षण",
@@ -312,11 +354,51 @@ export const content = {
         {
           org: "हिमालयन प्रिफ्याब प्रा. लि.",
           role: "सिविल इन्जिनियर",
-          period: "२०७५ भदौ – फागुन",
+          period: "२०७५ भदौ – फागुन (२०१८ – २०१९ ई.)",
           bullets: [
             "स्टिल तथा प्रिफ्याब संरचनाको डिजाइन र विश्लेषण",
             "साइट सुपरिवेक्षण, समन्वय, लागत अनुमान तथा बी.ओ.क्यू. तयारी",
           ],
+        },
+      ],
+    },
+    works: {
+      eyebrow: "छानिएका कार्य",
+      title: "छानिएका कार्यहरू",
+      description:
+        "सार्वजनिक पूर्वाधार निर्माण, नगरपालिका इन्जिनियरिङ तथा डिजाइन अभ्यासका प्रतिनिधिमूलक कार्यहरू।",
+      items: [
+        {
+          name: "एकीकृत खानेपानी तथा ढल व्यवस्थापन आयोजना",
+          agency: "नेपाल सरकार · खा.ढ.व्य. विभाग",
+          role: "राजपत्रांकित तृतीय श्रेणी इन्जिनियर (सिविल) — ठेक्का प्रशासन तथा सुपरिवेक्षण",
+          description:
+            "खानेपानी तथा ढल निर्माण कार्यको ठेक्का प्रशासन, निर्माण सुपरिवेक्षण, चालु भुक्तानी तथा कार्य सम्पन्न प्रमाणीकरण।",
+          status: "हाल कार्यरत",
+        },
+        {
+          name: "म्याङलुङ नगरपालिकाका नगरस्तरीय पूर्वाधार कार्य",
+          agency: "म्याङलुङ नगरपालिका, तेह्रथुम",
+          role: "सिविल इन्जिनियर — प्राविधिक शाखा प्रमुख",
+          description:
+            "नगरपालिकाभरका निर्माण कार्यको योजना, डिजाइन, नक्सा स्वीकृति, लागत अनुमान तथा मूल्यांकन।",
+          status: "सम्पन्न (२०७६ – २०७९ साल)",
+        },
+        {
+          name: "अमेरिकामा भूमि विकास ढल निकास डिजाइन",
+          agency: "डिजाइन कोर सिस्टम्स प्रा. लि.",
+          role: "सिविल इन्जिनियर — ढल निकास डिजाइन तथा परिमाण सर्वेक्षण",
+          description:
+            "भूमि विकास आयोजनाका ढल निकास डिजाइन तथा ट्राफिक, स्टर्म सिवर, सडक, हाइड्रोलिक र स्यानिटरी सिवरको लागत अनुमान।",
+          status: "सम्पन्न (२०७५ – २०७६ साल)",
+        },
+        {
+          name: "स्टिल तथा प्रिफ्याब संरचना",
+          agency: "हिमालयन प्रिफ्याब प्रा. लि.",
+          role: "सिविल इन्जिनियर — डिजाइन, विश्लेषण तथा साइट सुपरिवेक्षण",
+          description:
+            "स्टिल तथा प्रिफ्याब संरचनाको डिजाइन र विश्लेषण सँगै साइट सुपरिवेक्षण, समन्वय, लागत अनुमान र बी.ओ.क्यू. तयारी।",
+          status: "सम्पन्न (२०७५ साल)",
         },
       ],
     },
@@ -398,7 +480,7 @@ export const content = {
       ],
     },
     gallery: {
-      eyebrow: "तस्बिर संग्रह",
+      eyebrow: "व्यक्तिगत",
       title: "क्षणहरू र सम्झना",
       description: "इन्जिनियरिङ बाहिरको जीवनको एक झलक।",
       viewAll: (n: number) => `सबै ${n} तस्बिर हेर्नुहोस्`,
@@ -427,6 +509,8 @@ export const content = {
       description: "परामर्श, संरचनात्मक डिजाइन तथा अनुसन्धान सहकार्यका लागि उपलब्ध।",
       email: "इमेल",
       officialEmail: "कार्यालय इमेल",
+      officialEmailNote: "सरकारी कार्यालय इमेल:",
+      comingSoon: "छिट्टै आउँदै",
       phone: "फोन",
       location: "स्थान",
       locationValue: "इटहरी, सुनसरी, नेपाल",
