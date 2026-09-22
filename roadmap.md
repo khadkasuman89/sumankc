@@ -1,10 +1,8 @@
 # Roadmap
 
-- [x] Refine hero and section spacing
-- [x] Make About strictly professional
-- [x] Add bilingual Selected Works from verified existing experience
-- [x] Rebuild Experience timeline with B.S./A.D. dates and organization icons
-- [x] Refine Skills badge grid
-- [x] Simplify Contact and social links
-- [x] Rename and move Personal gallery with four-photo preview
-- [x] Verify desktop/mobile, language switching, CV, DOI, gallery, and contact form
+- [ ] Establish architectural editorial design system and shared motion
+- [ ] Rebuild navigation, hero, and credential strip
+- [ ] Restructure About, Expertise, Software, Assignments, and Domains
+- [ ] Refine Experience, Research, Education, Documents, Gallery, Contact, and Footer
+- [ ] Update bilingual content, SEO, structured data, sitemap, and accessibility
+- [ ] Optimize assets and verify all target viewports and interactions
