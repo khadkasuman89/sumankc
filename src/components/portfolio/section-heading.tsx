@@ -14,14 +14,14 @@ export function SectionHeading({
   return (
     <div className={`mb-14 max-w-3xl ${align === "center" ? "mx-auto text-center" : ""}`}>
       <div
-        className={`text-xs font-semibold uppercase tracking-[0.22em] ${
+        className={`technical-label font-medium ${
           invert ? "text-steel" : "text-steel"
         }`}
       >
         {eyebrow}
       </div>
       <h2
-         className={`mt-4 font-display text-4xl leading-none sm:text-5xl lg:text-6xl ${
+         className={`mt-4 font-display text-4xl font-light leading-[1.05] sm:text-5xl lg:text-6xl ${
           invert ? "text-paper" : "text-foreground"
         }`}
       >

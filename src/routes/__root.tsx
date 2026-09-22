@@ -77,33 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Er. Suman Khadka | Civil Engineer Nepal" },
-      {
-        name: "description",
-        content:
-          "Professional Civil Engineer specializing in structural design, transportation engineering, project estimation, construction management, and engineering consultancy services in Nepal.",
-      },
-      {
-        name: "keywords",
-        content:
-          "Civil Engineer Nepal, Structural Engineer Nepal, Transportation Engineer, Estimation Engineer, Construction Consultant, Suman Khadka",
-      },
       { name: "author", content: "Er. Suman Khadka" },
-      { property: "og:title", content: "Er. Suman Khadka | Civil Engineer Nepal" },
-      {
-        property: "og:description",
-        content:
-          "Civil Engineer from Pulchowk Campus (IOE) — structural design, transportation engineering, project estimation, and construction management.",
-      },
       { property: "og:type", content: "website" },
       { property: "og:site_name", content: "Er. Suman Khadka" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Er. Suman Khadka | Civil Engineer Nepal" },
-      { name: "description", content: "A professional portfolio website for Civil Engineer Er. Suman Khadka, showcasing expertise and consulting opportunities." },
-      { property: "og:description", content: "A professional portfolio website for Civil Engineer Er. Suman Khadka, showcasing expertise and consulting opportunities." },
-      { name: "twitter:description", content: "A professional portfolio website for Civil Engineer Er. Suman Khadka, showcasing expertise and consulting opportunities." },
-      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0MevktSklChzZKzwjYoAVeEmknh2/social-images/social-1781518117759-pp_suman_new___surkhet.webp" },
-      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/0MevktSklChzZKzwjYoAVeEmknh2/social-images/social-1781518117759-pp_suman_new___surkhet.webp" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -114,7 +91,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@400;500;600;700&family=Archivo:wght@600;700;800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap",
       },
     ],
   }),
