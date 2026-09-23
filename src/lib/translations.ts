@@ -7,13 +7,15 @@ export const content = {
       home: "Home",
       about: "About",
       experience: "Experience",
+      expertise: "Expertise",
       works: "Selected Works",
-      gallery: "Personal",
+      gallery: "Gallery",
       education: "Education",
       research: "Research",
       contact: "Contact",
       hire: "Hire Me",
       menu: "Toggle menu",
+      downloadCv: "Download CV",
     },
     hero: {
       badge: "Gazetted Class III · Civil Engineer",
@@ -31,7 +33,19 @@ export const content = {
       govt: "Government of Nepal",
       govtSub: "Public Infrastructure · Nepal",
       explore: "Explore career",
+      viewProfile: "View Professional Profile",
+      role: "Civil Engineer · Construction Management · Public Infrastructure",
       portraitAlt: "Er. Suman Khadka — Civil Engineer, Government of Nepal",
+    },
+    credentials: {
+      label: "Verified credentials",
+      items: [
+        { value: "7+", label: "Years Experience" },
+        { value: "20971", label: "NEC Registration" },
+        { value: "3.77", label: "M.Sc. CGPA" },
+        { value: "79.65%", label: "B.E. Civil" },
+        { value: "3", label: "Publications" },
+      ],
     },
     about: {
       eyebrow: "About Me",
@@ -49,6 +63,13 @@ export const content = {
         officialEmail: { label: "Official Email" },
         spouse: { label: "Spouse", value: "Mrs. Baneeka Thapa" },
       },
+      focusEyebrow: "Focus Areas",
+      focus: [
+        { title: "Public Infrastructure", items: "Water Supply · Sewerage · Public Infrastructure" },
+        { title: "Project Delivery", items: "Contract Administration · Construction Supervision · Quality Assurance" },
+        { title: "Procurement", items: "Bid Evaluation · Procurement Documentation · Contract Management" },
+        { title: "Research", items: "Construction Management · Public Procurement · Contractor Performance" },
+      ],
     },
     experience: {
       eyebrow: "Experience",
@@ -159,6 +180,22 @@ export const content = {
             "Anil Marsani, Subid Ghimire, Saurav Parajuli, Suman Khadka and others (7 authors)",
         },
       ],
+      readPaper: "Read Paper",
+      metrics: [
+        { value: "03", label: "Publications" },
+        { value: "2025–2026", label: "Recent Peer-Reviewed Work" },
+        { value: "Construction & Infrastructure", label: "Research Focus" },
+      ],
+      interestsTitle: "Research Interests",
+      interests: [
+        "Public Procurement",
+        "Construction Management",
+        "Water Supply Infrastructure",
+        "Contractor Performance",
+        "Construction Cost Variation",
+        "Infrastructure Delivery",
+        "Project Performance",
+      ],
     },
     skills: {
       eyebrow: "Skills",
@@ -187,6 +224,64 @@ export const content = {
         },
       ],
     },
+    expertise: {
+      eyebrow: "Expertise",
+      title: "Core competencies",
+      description:
+        "Four practice areas drawn from public infrastructure delivery, procurement, and research.",
+      groups: [
+        {
+          title: "Water & Infrastructure",
+          items: ["Water Supply", "Sewerage", "Hydraulic Infrastructure", "Public Infrastructure"],
+        },
+        {
+          title: "Construction Management",
+          items: ["Contract Administration", "Construction Supervision", "Quality Assurance", "Project Management"],
+        },
+        {
+          title: "Procurement",
+          items: ["Procurement Documentation", "Bid Evaluation", "Contract Administration", "Tender & Contract Processes"],
+        },
+        {
+          title: "Engineering",
+          items: ["Cost Estimation", "BOQ Preparation", "Quantity Surveying", "Civil Engineering Design"],
+        },
+      ],
+    },
+    software: {
+      eyebrow: "Software",
+      title: "Tools in daily practice",
+      items: [
+        "AutoCAD",
+        "Civil 3D",
+        "ETABS",
+        "SAP2000",
+        "HEC-RAS",
+        "SketchUp",
+        "Smart Road",
+        "MS Office",
+        "HTML / CSS",
+        "Practical AI Tools",
+        "Website Design",
+        "Web Hosting",
+      ],
+    },
+    domains: {
+      eyebrow: "Professional Domains",
+      title: "Selected professional domains",
+      items: [
+        { title: "Water Supply Infrastructure", items: "Planning · Procurement · Construction · Contract Administration" },
+        { title: "Public Procurement", items: "Tender Documentation · Bid Evaluation · Contract Award" },
+        { title: "Construction Supervision", items: "Site Supervision · QA/QC · Testing · Certification" },
+        { title: "Project Management", items: "Cost · Time · Progress · Contractual Administration" },
+      ],
+    },
+    documents: {
+      eyebrow: "Documents",
+      title: "Documents",
+      cv: { title: "Curriculum Vitae", sub: "Updated professional CV", action: "Download CV" },
+      research: { title: "Research Publications", sub: "Published peer-reviewed papers", action: "View Research" },
+    },
     education: {
       eyebrow: "Education",
       title: "Academic background",
@@ -212,10 +307,15 @@ export const content = {
     },
     gallery: {
       eyebrow: "Personal",
-      title: "Moments & memories",
+      title: "Personal Moments",
       description: "A glimpse into life beyond engineering.",
       viewAll: (n: number) => `View all ${n} photos`,
       showFewer: "Show fewer photos",
+      portraitLabel: "Official Portrait",
+      personalLabel: "Personal Photographs",
+      close: "Close",
+      prev: "Previous photo",
+      next: "Next photo",
       captions: [
         "Official Portrait",
         "With Mrs. Baneeka Thapa",
@@ -237,7 +337,8 @@ export const content = {
     contact: {
       eyebrow: "Contact",
       title: "Let's build something solid",
-      description: "Open to consulting, structural design, and research collaborations.",
+      description:
+        "Open to academic, professional and research collaboration, subject to applicable professional and government regulations.",
       email: "Email",
       officialEmail: "Official Email",
       officialEmailNote: "Official government email:",
@@ -245,6 +346,7 @@ export const content = {
       phone: "Phone",
       location: "Location",
       locationValue: "Itahari, Sunsari, Nepal",
+      province: "Koshi Province, Nepal",
       mapTitle: "Map of Itahari, Sunsari, Nepal",
       name: "Name",
       namePlaceholder: "Your full name",
@@ -266,7 +368,7 @@ export const content = {
     },
     footer: {
       name: "Er. Suman Khadka",
-      tagline: "Gazetted Civil Engineer · Myanglung, Terhathum, Nepal",
+      tagline: "Civil Engineer · Construction Management · Public Infrastructure",
       rights: "All rights reserved.",
     },
   },
