@@ -1,5 +1,5 @@
-import { Download, Mail, BadgeCheck } from "lucide-react";
-import portrait from "@/assets/suman-portrait.png";
+import { Download, ArrowRight, BadgeCheck } from "lucide-react";
+import portrait from "@/assets/suman-portrait.webp";
 import cv from "@/assets/suman-cv.pdf";
 import { useI18n } from "@/lib/i18n";
 
@@ -8,75 +8,45 @@ export function Hero() {
   const h = t.hero;
 
   return (
-    <section
-      id="home"
-      className="relative isolate overflow-hidden bg-background px-5 pb-24 pt-32 sm:px-8 lg:min-h-[800px] lg:px-16 lg:pb-28 lg:pt-36"
-    >
-      <div aria-hidden className="editorial-grid absolute inset-0" />
-      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-14 lg:grid-cols-12 lg:gap-16">
-      <div className="lg:col-span-7 lg:pb-8">
-        <div className="max-w-3xl">
-          <span className="inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary">
-            <span className="h-px w-12 bg-primary/40" />
-            <BadgeCheck className="h-3.5 w-3.5" />
-            {h.badge}
+    <section id="home" className="relative isolate overflow-hidden bg-background px-5 pb-20 pt-36 sm:px-8 lg:px-16 lg:pb-24 lg:pt-40">
+      <div aria-hidden className="editorial-grid absolute inset-0 opacity-60" />
+      <svg aria-hidden className="blueprint-drift pointer-events-none absolute -right-40 top-10 h-[640px] w-[640px] text-primary/15" viewBox="0 0 400 400" fill="none">
+        {[40, 70, 100, 130, 160, 190].map((r) => (
+          <ellipse key={r} cx="200" cy="200" rx={r * 1.1} ry={r * 0.8} stroke="currentColor" strokeWidth="1" />
+        ))}
+      </svg>
+      <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-12 lg:gap-16">
+        <div className="lg:col-span-7">
+          <span className="technical-label inline-flex items-center gap-3 text-primary">
+            <span className="h-px w-10 bg-primary/50" />
+            <BadgeCheck className="h-3.5 w-3.5" /> {h.badge}
           </span>
-
-          <h1 className="mt-7 font-display text-6xl leading-[0.9] text-foreground sm:text-7xl lg:text-8xl xl:text-9xl">
-            {h.firstName}<br /><span className="italic text-primary">{h.lastName}</span>
+          <h1 className="mt-6 font-display text-5xl font-light leading-[0.95] text-foreground sm:text-6xl lg:text-7xl xl:text-8xl">
+            {h.firstName} <span className="font-semibold text-primary">{h.lastName}</span>
           </h1>
-
-          <dl className="mt-8 grid max-w-2xl grid-cols-3 border-y border-border bg-background/75 backdrop-blur-sm">
-            {h.stats.map((s) => (
-              <div key={s.label} className="min-w-0 border-r border-border px-3 py-4 last:border-r-0 sm:px-5">
-                <dt className="text-[10px] font-semibold uppercase tracking-[0.16em] text-muted-foreground sm:text-xs">{s.label}</dt>
-                <dd className="mt-1 font-display text-lg leading-tight text-foreground sm:text-2xl">{s.value}</dd>
-              </div>
-            ))}
-          </dl>
-
-          <p className="mt-8 max-w-2xl text-lg leading-relaxed text-muted-foreground sm:text-xl">
-            {h.summary}
-          </p>
-
-          <div className="mt-10 flex flex-wrap gap-3">
-            <a
-              href="#contact"
-               className="inline-flex items-center gap-2 bg-foreground px-7 py-4 text-sm font-semibold text-background transition-colors hover:bg-primary"
-            >
-              <Mail className="h-4 w-4" /> {h.collaborate}
+          <p className="mt-6 text-base font-semibold text-foreground sm:text-lg">{h.role}</p>
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">{h.summary}</p>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <a href="#about" className="inline-flex min-h-12 items-center gap-2 bg-foreground px-6 py-3.5 text-sm font-semibold text-background transition-colors hover:bg-primary">
+              {h.viewProfile} <ArrowRight className="h-4 w-4" />
             </a>
-            <a
-              href={cv}
-              download
-              target="_blank"
-              rel="noopener noreferrer"
-               className="inline-flex items-center gap-2 border border-foreground px-7 py-4 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background"
-            >
+            <a href={cv} download className="inline-flex min-h-12 items-center gap-2 border border-foreground px-6 py-3.5 text-sm font-semibold text-foreground transition-colors hover:bg-foreground hover:text-background">
               <Download className="h-4 w-4" /> {h.downloadCv}
             </a>
           </div>
-
         </div>
-      </div>
 
-      <div className="relative lg:col-span-5 lg:pl-4">
-        <div aria-hidden className="absolute -inset-6 border border-primary/20 bg-primary/5 [background-image:linear-gradient(to_right,var(--color-primary)_1px,transparent_1px),linear-gradient(to_bottom,var(--color-primary)_1px,transparent_1px)] [background-size:32px_32px] opacity-30" />
-        <div aria-hidden className="absolute -left-10 top-12 hidden h-px w-24 bg-primary lg:block" />
-        <div aria-hidden className="absolute -right-5 bottom-16 hidden h-28 w-px bg-primary lg:block" />
-        <figure className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-muted shadow-elegant">
-          <img
-            src={portrait}
-            alt={h.portraitAlt}
-            className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-[1.025]"
-          />
-          <figcaption className="pointer-events-none absolute inset-x-0 bottom-0 border-t border-background/20 bg-foreground/90 px-5 py-4 text-background">
-            <div className="text-sm font-semibold">{h.govt}</div>
-            <div className="mt-0.5 text-xs opacity-80">{h.govtSub}</div>
-          </figcaption>
-        </figure>
-        <a href="#experience" className="absolute -bottom-7 left-0 inline-flex items-center gap-4 bg-primary px-7 py-5 text-xs font-semibold uppercase tracking-[0.18em] text-primary-foreground transition-colors hover:bg-foreground">{h.explore} <span aria-hidden>→</span></a>
-      </div>
+        <div className="relative mx-auto w-full max-w-md lg:col-span-5 lg:max-w-none">
+          <div aria-hidden className="absolute -inset-4 border border-primary/25" />
+          <div aria-hidden className="absolute -left-8 top-10 hidden h-px w-16 bg-primary lg:block" />
+          <figure className="relative aspect-[4/5] w-full overflow-hidden border border-border bg-muted">
+            <img src={portrait} alt={h.portraitAlt} fetchPriority="high" decoding="async" className="h-full w-full object-cover object-top" />
+            <figcaption className="absolute inset-x-0 bottom-0 bg-foreground/90 px-5 py-3 text-background">
+              <div className="technical-label">{h.badge}</div>
+              <div className="mt-1 text-xs opacity-80">{h.govt} · {h.govtSub}</div>
+            </figcaption>
+          </figure>
+        </div>
       </div>
     </section>
   );
