@@ -8,7 +8,7 @@ export const content = {
       about: "About",
       experience: "Experience",
       expertise: "Expertise",
-      works: "Selected Works",
+      works: "Assignments",
       gallery: "Gallery",
       education: "Education",
       research: "Research",
@@ -115,8 +115,8 @@ export const content = {
       ],
     },
     works: {
-      eyebrow: "Selected Works",
-      title: "Selected works",
+      eyebrow: "Representative Assignments",
+      title: "Representative assignments",
       description:
         "Representative assignments from public infrastructure delivery, municipal engineering, and design practice.",
       items: [
@@ -486,8 +486,8 @@ export const content = {
       ],
     },
     works: {
-      eyebrow: "छानिएका कार्य",
-      title: "छानिएका कार्यहरू",
+      eyebrow: "प्रतिनिधिमूलक कार्यभार",
+      title: "प्रतिनिधिमूलक कार्यभारहरू",
       description:
         "सार्वजनिक पूर्वाधार निर्माण, नगरपालिका इन्जिनियरिङ तथा डिजाइन अभ्यासका प्रतिनिधिमूलक कार्यहरू।",
       items: [
