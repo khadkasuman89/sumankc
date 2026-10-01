@@ -73,6 +73,9 @@ export function Contact() {
               </a>
             ))}
 
+            <p className="font-mono text-xs uppercase tracking-[0.14em] text-muted-foreground">
+              {c.province}
+            </p>
             <p className="text-xs text-muted-foreground">
               {c.officialEmailNote}{" "}
               <a href="mailto:suman.khadka1@nepal.gov.np" className="font-medium text-foreground underline underline-offset-2">

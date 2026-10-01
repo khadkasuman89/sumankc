@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { SectionHeading } from "./section-heading";
 import { useI18n } from "@/lib/i18n";
 import { Button } from "@/components/ui/button";
@@ -36,59 +37,122 @@ const photos = [
   { src: highwayRoadcut, alt: "Er. Suman Khadka on a highway beside a rock cut slope" },
 ];
 
-const PREVIEW_COUNT = 4;
+const PREVIEW_COUNT = 6;
 
 export function Gallery() {
   const [showAll, setShowAll] = useState(false);
+  const [active, setActive] = useState<number | null>(null);
   const { t } = useI18n();
-  const items = photos.map((p, i) => ({ ...p, caption: t.gallery.captions[i] ?? "" }));
-  const visible = showAll ? items : items.slice(0, PREVIEW_COUNT);
+  const g = t.gallery;
+  const items = photos.map((p, i) => ({ ...p, caption: g.captions[i] ?? "" }));
+  const [official, ...personal] = items;
+  const visible = showAll ? personal : personal.slice(0, PREVIEW_COUNT);
+
+  const close = useCallback(() => setActive(null), []);
+  const step = useCallback(
+    (d: number) => setActive((i) => (i === null ? i : (i + d + personal.length) % personal.length)),
+    [personal.length],
+  );
+
+  useEffect(() => {
+    if (active === null) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") close();
+      if (e.key === "ArrowRight") step(1);
+      if (e.key === "ArrowLeft") step(-1);
+    };
+    document.addEventListener("keydown", onKey);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = "";
+    };
+  }, [active, close, step]);
+
+  const current = active !== null ? personal[active] : null;
 
   return (
     <section id="personal" className="relative py-24 lg:py-36">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          eyebrow={t.gallery.eyebrow}
-          title={t.gallery.title}
-          description={t.gallery.description}
-        />
+        <SectionHeading eyebrow={g.eyebrow} title={g.title} description={g.description} />
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {visible.map((p) => (
-            <figure
-              key={p.src}
-              className="group relative overflow-hidden border border-border bg-card shadow-card transition-all hover:-translate-y-1 hover:shadow-elegant"
-            >
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={p.src}
-                  alt={p.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
+        <div className="grid gap-10 lg:grid-cols-4">
+          <figure className="lg:col-span-1">
+            <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+              {g.portraitLabel}
+            </div>
+            <div className="overflow-hidden border border-border bg-card">
+              <img src={official.src} alt={official.alt} loading="lazy" className="h-auto w-full" />
+            </div>
+          </figure>
+
+          <div className="lg:col-span-3">
+            <div className="mb-3 font-mono text-[11px] uppercase tracking-[0.16em] text-muted-foreground">
+              {g.personalLabel}
+            </div>
+            <ul className="columns-1 gap-4 sm:columns-2 lg:columns-3">
+              {visible.map((p, i) => (
+                <li key={p.src} className="mb-4 break-inside-avoid">
+                  <button
+                    type="button"
+                    onClick={() => setActive(i)}
+                    className="group block w-full overflow-hidden border border-border bg-card text-left"
+                    aria-label={p.caption || p.alt}
+                  >
+                    <img
+                      src={p.src}
+                      alt={p.alt}
+                      loading="lazy"
+                      className="h-auto w-full transition-opacity duration-300 group-hover:opacity-90"
+                    />
+                    <span className="block border-t border-border px-3 py-2 text-xs font-semibold">
+                      {p.caption}
+                    </span>
+                  </button>
+                </li>
+              ))}
+            </ul>
+
+            {personal.length > PREVIEW_COUNT && (
+              <div className="mt-8 flex justify-center">
+                <Button
+                  type="button"
+                  variant="outline"
+                  size="lg"
+                  onClick={() => setShowAll((v) => !v)}
+                  className="h-auto px-7 py-4 text-sm font-bold uppercase tracking-[0.14em]"
+                >
+                  {showAll ? g.showFewer : g.viewAll(personal.length)}
+                </Button>
               </div>
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-background/90 via-background/40 to-transparent p-4 text-sm font-semibold">
-                {p.caption}
-              </figcaption>
-            </figure>
-          ))}
-        </div>
-
-        {photos.length > PREVIEW_COUNT && (
-          <div className="mt-10 flex justify-center">
-            <Button
-              type="button"
-              variant="outline"
-              size="lg"
-              onClick={() => setShowAll((v) => !v)}
-              className="h-auto px-7 py-4 font-nav text-sm font-bold uppercase tracking-[0.14em]"
-            >
-              {showAll ? t.gallery.showFewer : t.gallery.viewAll(photos.length)}
-              <span aria-hidden>{showAll ? "↑" : "↓"}</span>
-            </Button>
+            )}
           </div>
-        )}
+        </div>
       </div>
+
+      {current && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={current.caption || current.alt}
+          className="fixed inset-0 z-[60] flex items-center justify-center bg-background/95 p-4"
+          onClick={close}
+        >
+          <figure className="relative max-h-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
+            <img src={current.src} alt={current.alt} className="max-h-[80vh] w-auto object-contain" />
+            <figcaption className="mt-3 text-center text-sm font-semibold">{current.caption}</figcaption>
+          </figure>
+          <Button autoFocus variant="outline" size="icon" aria-label={g.close} onClick={close} className="absolute right-4 top-4">
+            <X className="h-5 w-5" />
+          </Button>
+          <Button variant="outline" size="icon" aria-label={g.prev} onClick={(e) => { e.stopPropagation(); step(-1); }} className="absolute left-4 top-1/2 -translate-y-1/2">
+            <ChevronLeft className="h-5 w-5" />
+          </Button>
+          <Button variant="outline" size="icon" aria-label={g.next} onClick={(e) => { e.stopPropagation(); step(1); }} className="absolute right-4 top-1/2 -translate-y-1/2">
+            <ChevronRight className="h-5 w-5" />
+          </Button>
+        </div>
+      )}
     </section>
   );
 }
