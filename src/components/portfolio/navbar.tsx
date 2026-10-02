@@ -17,10 +17,9 @@ export function Navbar() {
     { href: "#home", label: t.nav.home },
     { href: "#about", label: t.nav.about },
     { href: "#experience", label: t.nav.experience },
-    { href: "#expertise", label: t.nav.expertise },
-    { href: "#research", label: t.nav.research },
-    { href: "#education", label: t.nav.education },
     { href: "#personal", label: t.nav.gallery },
+    { href: "#education", label: t.nav.education },
+    { href: "#research", label: t.nav.research },
     { href: "#contact", label: t.nav.contact },
   ];
 

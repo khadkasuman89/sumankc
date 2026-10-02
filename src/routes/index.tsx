@@ -5,7 +5,6 @@ import { Hero } from "@/components/portfolio/hero";
 import { CredentialStrip } from "@/components/portfolio/credential-strip";
 import { About } from "@/components/portfolio/about";
 import { Experience } from "@/components/portfolio/experience";
-import { Expertise } from "@/components/portfolio/expertise";
 import { Research } from "@/components/portfolio/research";
 import { Education } from "@/components/portfolio/education";
 import { Documents } from "@/components/portfolio/documents";
@@ -96,12 +95,11 @@ function Index() {
           <CredentialStrip />
           <About />
           <Experience />
-          <Expertise />
           <SelectedWorks />
-          <Research />
-          <Education />
-          <Documents />
           <Gallery />
+          <Education />
+          <Research />
+          <Documents />
           <Contact />
         </main>
         <Footer />
