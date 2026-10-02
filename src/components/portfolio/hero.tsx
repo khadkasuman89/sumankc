@@ -9,12 +9,6 @@ export function Hero() {
 
   return (
     <section id="home" className="relative isolate overflow-hidden bg-background px-5 pb-20 pt-36 sm:px-8 lg:px-16 lg:pb-24 lg:pt-40">
-      <div aria-hidden className="editorial-grid absolute inset-0 opacity-60" />
-      <svg aria-hidden className="blueprint-drift pointer-events-none absolute -right-40 top-10 h-[640px] w-[640px] text-primary/15" viewBox="0 0 400 400" fill="none">
-        {[40, 70, 100, 130, 160, 190].map((r) => (
-          <ellipse key={r} cx="200" cy="200" rx={r * 1.1} ry={r * 0.8} stroke="currentColor" strokeWidth="1" />
-        ))}
-      </svg>
       <div className="relative mx-auto grid w-full max-w-7xl items-center gap-12 lg:grid-cols-12 lg:gap-16">
         <div className="lg:col-span-7">
           <span className="technical-label inline-flex items-center gap-3 text-primary">

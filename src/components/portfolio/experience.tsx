@@ -1,5 +1,6 @@
 import { Building2, Factory, Landmark } from "lucide-react";
 import { SectionHeading } from "./section-heading";
+import { Expertise } from "./expertise";
 import { useI18n } from "@/lib/i18n";
 
 export function Experience() {
@@ -50,6 +51,7 @@ export function Experience() {
             ))}
           </div>
         </div>
+        <Expertise />
       </div>
     </section>
   );
