@@ -94,10 +94,10 @@ function Index() {
           <Hero />
           <CredentialStrip />
           <About />
+          <Education />
           <Experience />
           <SelectedWorks />
           <Gallery />
-          <Education />
           <Research />
           <Documents />
           <Contact />

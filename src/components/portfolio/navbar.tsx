@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { Menu, X, Download } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./theme-toggle";
 import { LanguageToggle } from "./language-toggle";
 import { NepaliClock } from "./nepali-clock";
 import { SiteSearch } from "./site-search";
-import cv from "@/assets/suman-cv.pdf";
 import { useI18n } from "@/lib/i18n";
 
 export function Navbar() {
@@ -16,9 +15,9 @@ export function Navbar() {
   const links = [
     { href: "#home", label: t.nav.home },
     { href: "#about", label: t.nav.about },
+    { href: "#education", label: t.nav.education },
     { href: "#experience", label: t.nav.experience },
     { href: "#personal", label: t.nav.gallery },
-    { href: "#education", label: t.nav.education },
     { href: "#research", label: t.nav.research },
     { href: "#contact", label: t.nav.contact },
   ];
@@ -61,13 +60,6 @@ export function Navbar() {
           <SiteSearch />
           <LanguageToggle />
           <ThemeToggle />
-          <a
-            href={cv}
-            download
-            className="hidden items-center gap-2 bg-primary px-4 py-2 text-xs font-bold uppercase tracking-wider text-primary-foreground transition-colors hover:bg-foreground hover:text-background md:inline-flex"
-          >
-            <Download className="h-4 w-4" /> {t.nav.downloadCv}
-          </a>
           <Button
             variant="ghost"
             size="icon"
@@ -92,11 +84,6 @@ export function Navbar() {
                 </a>
               </li>
             ))}
-            <li className="md:hidden">
-              <a href={cv} download className="mt-2 flex items-center justify-center gap-2 bg-primary px-3 py-3 text-sm font-bold uppercase tracking-wider text-primary-foreground">
-                <Download className="h-4 w-4" /> {t.nav.downloadCv}
-              </a>
-            </li>
           </ul>
         </div>
       )}

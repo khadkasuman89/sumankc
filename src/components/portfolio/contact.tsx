@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, Send, Facebook, Instagram, Linkedin, BookOpen } from "lucide-react";
+import { Mail, Phone, Send, Facebook, Instagram, Linkedin, BookOpen, Globe, Music2 } from "lucide-react";
 import { z } from "zod";
 import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
@@ -12,10 +12,12 @@ import { useI18n } from "@/lib/i18n";
 const socials = [
   { icon: Facebook, href: "https://www.facebook.com/er.sumankhadka", label: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/Er.sumankhadka", label: "Instagram" },
+  { icon: Music2, href: "https://www.tiktok.com/@er.sumankhadka", label: "TikTok" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/er-sumankhadka/", label: "LinkedIn" },
+  { icon: Globe, href: "https://www.suman-khadka.com.np", label: "Personal website" },
 ];
 
 const placeholders = [
-  { icon: Linkedin, label: "LinkedIn" },
   { icon: BookOpen, label: "ResearchGate / ORCID" },
 ];
 
@@ -91,6 +93,7 @@ export function Contact() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
+                  title={label}
                   className="grid h-11 w-11 place-items-center rounded-xl border border-border bg-card text-muted-foreground shadow-card transition-all hover:-translate-y-0.5 hover:text-primary hover:shadow-elegant"
                 >
                   <Icon className="h-5 w-5" />
@@ -110,7 +113,7 @@ export function Contact() {
               ))}
             </div>
             <p className="text-xs text-muted-foreground">
-              LinkedIn · ResearchGate / ORCID — {c.comingSoon}
+              ResearchGate / ORCID — {c.comingSoon}
             </p>
 
             <div className="overflow-hidden border border-border bg-card shadow-card">
