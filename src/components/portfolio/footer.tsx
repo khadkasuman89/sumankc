@@ -5,9 +5,9 @@ export function Footer() {
   const { t } = useI18n();
   const links = [
     { href: "#about", label: t.nav.about },
+    { href: "#education", label: t.nav.education },
     { href: "#experience", label: t.nav.experience },
     { href: "#research", label: t.nav.research },
-    { href: "#education", label: t.nav.education },
     { href: cv, label: "CV", download: true },
     { href: "#contact", label: t.nav.contact },
   ];
