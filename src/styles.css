@@ -58,6 +58,12 @@
   --color-navy: oklch(0.31 0.05 230);
   --color-steel: oklch(0.48 0.075 215);
   --color-paper: oklch(0.97 0.008 85);
+
+  /* Festival banner (Dashain · Tihar · Chhath) */
+  --color-festival-bg: oklch(0.63 0.2 14);
+  --color-festival-ink: oklch(0.3 0.15 20);
+  --color-festival-gold: oklch(0.86 0.15 92);
+  --color-festival-sky: oklch(0.5 0.16 250);
 }
 
 :root {
@@ -250,4 +256,41 @@
     linear-gradient(color-mix(in oklab, var(--color-primary) 14%, transparent) 1px, transparent 1px),
     linear-gradient(90deg, color-mix(in oklab, var(--color-primary) 14%, transparent) 1px, transparent 1px);
   background-size: 48px 48px;
+}
+
+.festival-banner {
+  background-color: var(--color-festival-bg);
+  border-bottom: 1px solid color-mix(in oklab, var(--color-festival-ink) 40%, transparent);
+}
+
+.festival-stripe {
+  height: 5px;
+  background: linear-gradient(
+    90deg,
+    var(--color-festival-sky) 0%,
+    var(--color-festival-gold) 35%,
+    oklch(0.98 0.01 90) 55%,
+    var(--color-festival-gold) 75%,
+    var(--color-festival-sky) 100%
+  );
+}
+
+.festival-track {
+  display: flex;
+  width: max-content;
+  animation: festival-marquee 32s linear infinite;
+}
+
+.festival-text {
+  white-space: nowrap;
+  padding: 0.45rem 1.5rem;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-festival-ink);
+  font-family: var(--font-sans);
+}
+
+@keyframes festival-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
