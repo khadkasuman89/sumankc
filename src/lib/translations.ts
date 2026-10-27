@@ -17,6 +17,9 @@ export const content = {
       menu: "Toggle menu",
       downloadCv: "Download CV",
     },
+    festival: {
+      message: "Wishing you all a joyful Vijaya Dashami, Shubha Deepawali and Chhath festival! 🎉🎈",
+    },
     hero: {
       badge: "Gazetted Class III · Civil Engineer",
       firstName: "Er. Suman",
@@ -387,6 +390,9 @@ export const content = {
       hire: "सम्पर्क गर्नुहोस्",
       menu: "मेनु खोल्नुहोस्",
       downloadCv: "सी.भी. डाउनलोड",
+    },
+    festival: {
+      message: "शुभ विजयादशमी, शुभ दीपावली र छठ पर्वको अवसरमा यहाँहरू सबैजनालाई हार्दिक मङ्गलमय शुभकामना! 🎉🎈",
     },
     hero: {
       badge: "राजपत्रांकित तृतीय श्रेणी · सिविल इन्जिनियर",

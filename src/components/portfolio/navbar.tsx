@@ -5,6 +5,7 @@ import { ThemeToggle } from "./theme-toggle";
 import { LanguageToggle } from "./language-toggle";
 import { NepaliClock } from "./nepali-clock";
 import { SiteSearch } from "./site-search";
+import { FestivalBanner } from "./festival-banner";
 import { useI18n } from "@/lib/i18n";
 
 export function Navbar() {
@@ -35,6 +36,7 @@ export function Navbar() {
         scrolled ? "border-b border-border bg-background/95 backdrop-blur" : "bg-background/85 backdrop-blur-sm"
       }`}
     >
+      <FestivalBanner />
       <div className="border-b border-border/60 bg-paper">
         <div className="mx-auto flex max-w-7xl justify-center px-4 py-1.5 sm:px-6 lg:justify-end lg:px-8">
           <NepaliClock />
