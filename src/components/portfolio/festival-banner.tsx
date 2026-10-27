@@ -1,18 +1,24 @@
-import { useI18n } from "@/lib/i18n";
+import { content } from "@/lib/translations";
 
 export function FestivalBanner() {
-  const { t } = useI18n();
-  const message = t.festival.message;
+  // Both languages always, so every visitor sees the greeting in English and Nepali.
+  const messages = [content.en.festival.message, content.ne.festival.message];
 
   return (
-    <div role="status" aria-label={message} className="festival-banner">
+    <div role="status" aria-label={messages.join(" ")} className="festival-banner">
       <div aria-hidden className="festival-stripe" />
       <div className="overflow-hidden">
         <div className="festival-track">
-          <span className="festival-text">{message}</span>
-          <span aria-hidden className="festival-text">
-            {message}
-          </span>
+          {messages.map((m, i) => (
+            <span key={`a-${i}`} className="festival-text">
+              {m}
+            </span>
+          ))}
+          {messages.map((m, i) => (
+            <span key={`b-${i}`} aria-hidden className="festival-text">
+              {m}
+            </span>
+          ))}
         </div>
       </div>
     </div>
