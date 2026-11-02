@@ -9,3 +9,4 @@
 - [x] Add TikTok, LinkedIn, and personal website links to Contact
 - [x] Remove the top CV action and place Education after About
 - [x] Verify navigation and social links on phone and desktop
+- [x] Add a scannable website QR code to the Contact section
