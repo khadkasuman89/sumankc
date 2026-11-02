@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { SectionHeading } from "./section-heading";
 import { useI18n } from "@/lib/i18n";
+import websiteQr from "@/assets/website-qr.png.asset.json";
 
 const socials = [
   { icon: Facebook, href: "https://www.facebook.com/er.sumankhadka", label: "Facebook" },
@@ -115,6 +116,31 @@ export function Contact() {
             <p className="text-xs text-muted-foreground">
               ResearchGate / ORCID — {c.comingSoon}
             </p>
+
+            <div className="flex items-center gap-4 border border-border bg-card p-4 shadow-card">
+              <img
+                src={websiteQr.url}
+                alt={c.qrTitle}
+                width={112}
+                height={112}
+                loading="lazy"
+                decoding="async"
+                className="h-28 w-28 shrink-0 bg-white p-1"
+              />
+              <div className="min-w-0">
+                <div className="text-xs uppercase tracking-wider text-muted-foreground">QR</div>
+                <div className="font-semibold">{c.qrTitle}</div>
+                <p className="mt-1 text-xs text-muted-foreground">{c.qrHint}</p>
+                <a
+                  href="https://www.suman-khadka.com.np"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1.5 inline-block text-xs font-medium text-primary underline underline-offset-2"
+                >
+                  {c.qrSite}
+                </a>
+              </div>
+            </div>
 
             <div className="overflow-hidden border border-border bg-card shadow-card">
               <iframe
