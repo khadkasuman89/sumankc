@@ -10,6 +10,9 @@ import { SectionHeading } from "./section-heading";
 import { useI18n } from "@/lib/i18n";
 import websiteQr from "@/assets/website-qr.png.asset.json";
 
+// Vercel does not serve Lovable's relative asset endpoint.
+const websiteQrUrl = new URL(websiteQr.url, "https://sumankc.lovable.app").href;
+
 const socials = [
   { icon: Facebook, href: "https://www.facebook.com/er.sumankhadka", label: "Facebook" },
   { icon: Instagram, href: "https://www.instagram.com/Er.sumankhadka", label: "Instagram" },
@@ -119,7 +122,7 @@ export function Contact() {
 
             <div className="flex items-center gap-4 border border-border bg-card p-4 shadow-card">
               <img
-                src={websiteQr.url}
+                src={websiteQrUrl}
                 alt={c.qrTitle}
                 width={112}
                 height={112}
